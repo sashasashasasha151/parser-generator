@@ -9,118 +9,121 @@ class Parser {
     fun parse(input: InputStream): Tree {
         lex = LexicalAnalyzer(input)
         lex.nextToken()
-        return S()
-    }
-
-    private fun S(): Tree {
-        when (lex.curToken) {
-            VAR, NOT, LPAREN -> {
-                val aFun = A()
-                val tFun = T()
-                return Tree("S", listOf(aFun, tFun))
-            }
-            else -> {
-                throw AssertionError()
-            }
+        val tree = S()
+        if(lex.curToken == END) {
+            return tree
+        } else {
+            throw AssertionError("${lex.curToken} not expected in the end")
         }
     }
 
-    private fun T(): Tree {
-        when (lex.curToken) {
-            XOR -> {
-                lex.nextToken()
-                val aFun = A()
-                val tFun = T()
-                return Tree("T", listOf(Tree("^"), aFun, tFun))
+    private fun S(): Tree =
+            when (lex.curToken) {
+                VAR, NOT, LPAREN ->
+                    Tree("S",
+                            listOf(A(), T())
+                    )
+                else ->
+                    throw AssertionError("${lex.curToken} not expected in S()")
             }
-            RPAREN, END -> {
-                return Tree("T", listOf(Tree("e")))
-            }
-            else -> {
-                throw AssertionError()
-            }
-        }
-    }
 
-    private fun A(): Tree {
-        when (lex.curToken) {
-            VAR, NOT, LPAREN -> {
-                val bFun = B()
-                val uFun = U()
-                return Tree("A", listOf(bFun, uFun))
+    private fun T(): Tree =
+            when (lex.curToken) {
+                XOR -> {
+                    lex.nextToken()
+                    Tree("T",
+                            listOf(Tree("^"), A(), T())
+                    )
+                }
+                RPAREN, END ->
+                    Tree("T",
+                            listOf(Tree("eps"))
+                    )
+                else ->
+                    throw AssertionError("${lex.curToken} not expected in T()")
             }
-            else -> {
-                throw AssertionError()
-            }
-        }
-    }
 
-    private fun U(): Tree {
-        when (lex.curToken) {
-            OR -> {
-                lex.nextToken()
-                val bFun = B()
-                val uFun = U()
-                return Tree("U", listOf(Tree("|"), bFun, uFun))
+    private fun A() =
+            when (lex.curToken) {
+                VAR, NOT, LPAREN ->
+                    Tree("A",
+                            listOf(B(), U())
+                    )
+                else ->
+                    throw AssertionError("${lex.curToken} not expected in A()")
             }
-            XOR, RPAREN, END -> {
-                return Tree("U", listOf(Tree("e")))
-            }
-            else -> {
-                throw AssertionError()
-            }
-        }
-    }
 
-    private fun B(): Tree {
-        when (lex.curToken) {
-            VAR, NOT, LPAREN -> {
-                val cFun = C()
-                val vFun = V()
-                return Tree("B", listOf(cFun, vFun))
+    private fun U(): Tree =
+            when (lex.curToken) {
+                OR -> {
+                    lex.nextToken()
+                    Tree("U",
+                            listOf(Tree("|"), B(), U())
+                    )
+                }
+                XOR, RPAREN, END ->
+                    Tree("U",
+                            listOf(Tree("eps"))
+                    )
+                else ->
+                    throw AssertionError("${lex.curToken} not expected in U()")
             }
-            else -> {
-                throw AssertionError()
-            }
-        }
-    }
 
-    private fun V(): Tree {
-        when (lex.curToken) {
-            AND -> {
-                lex.nextToken()
-                val cFun = C()
-                val vFun = V()
-                return Tree("V", listOf(Tree("&"), cFun, vFun))
-            }
-            XOR, OR, RPAREN, END -> {
-                return Tree("V", listOf(Tree("e")))
-            }
-            else -> {
-                throw AssertionError()
-            }
-        }
-    }
 
-    private fun C(): Tree {
+    private fun B() =
+            when (lex.curToken) {
+                VAR, NOT, LPAREN ->
+                    Tree("B",
+                            listOf(C(), V())
+                    )
+                else ->
+                    throw AssertionError()
+            }
+
+
+    private fun V(): Tree =
+            when (lex.curToken) {
+                AND -> {
+                    lex.nextToken()
+                    Tree("V",
+                            listOf(Tree("&"), C(), V())
+                    )
+                }
+                XOR, OR, RPAREN, END ->
+                    Tree("V",
+                            listOf(Tree("eps"))
+                    )
+                else ->
+                    throw AssertionError("${lex.curToken} not expected in V()")
+            }
+
+    private fun C() :Tree {
         when (lex.curToken) {
             VAR -> {
                 lex.nextToken()
-                return Tree("C", listOf(Tree("n")))
+                return Tree("C",
+                        listOf(Tree("var"))
+                )
             }
             NOT -> {
                 lex.nextToken()
-                return Tree("C", listOf(Tree("!"), S()))
+                return Tree("C",
+                        listOf(Tree("!"), S())
+                )
             }
             LPAREN -> {
                 lex.nextToken()
                 val sub = S()
+                if(lex.curToken != RPAREN) {
+                    throw AssertionError("${lex.curToken} not expected in C()")
+                }
                 lex.nextToken()
-                return Tree("C", listOf(Tree("("), sub, Tree(")")))
+                return Tree("C",
+                        listOf(Tree("("), sub, Tree(")"))
+                )
             }
-            else -> {
-                throw AssertionError()
-            }
+            else ->
+                throw AssertionError("${lex.curToken} not expected in C()")
         }
     }
 }

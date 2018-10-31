@@ -23,7 +23,7 @@ class LexicalAnalyzer(private val input: InputStream) {
             return
         }
 
-        while (isBlank(curChar.toChar())) {
+        while (curChar.toChar().isWhitespace()) {
             nextChar()
         }
 
@@ -35,9 +35,7 @@ class LexicalAnalyzer(private val input: InputStream) {
             '|' -> OR
             '^' -> XOR
             '!' -> NOT
-            else -> {
-                throw ParseException("Illegal character '$curChar'", curPos)
-            }
+            else -> throw ParseException("Illegal character '${curChar.toChar()}'", curPos)
         }
 
         nextChar()
@@ -51,6 +49,4 @@ class LexicalAnalyzer(private val input: InputStream) {
             throw ParseException(e.message, curPos);
         }
     }
-
-    private fun isBlank(char: Char) = char.isWhitespace()
 }
