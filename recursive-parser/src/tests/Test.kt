@@ -25,7 +25,9 @@ class Test {
             "a|a|b"
     )
     private val notTestsList = listOf(
-            "!a"
+            "!a",
+            "!!a",
+            "!!!a"
     )
     private val parenthesesTestsList = listOf(
             "(a)",
@@ -38,7 +40,9 @@ class Test {
     private val validTestsList = listOf(
             "(!a | b) & a & (a | !(b ^ c)) ^ g",
             "((!a|b&h)|(r^f^(t|i)&(t^v)))&g",
-            "(a|s)^((a^b)^(c|c|c|c))"
+            "(a|s)^((a^b)^(c|c|c|c))",
+            "!(!a)",
+            "a&!a"
     )
     private val notValidTestsList = listOf(
             "()",
@@ -49,7 +53,9 @@ class Test {
             "((a)|(a))^((b)&(b))&(a))",
             "(((a))))",
             "((((",
-            ")))"
+            ")))",
+            "!^a",
+            "^ab"
     )
     private val rand = Random()
     private val str = StringBuilder()

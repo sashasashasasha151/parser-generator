@@ -11,22 +11,31 @@
 
 ### Построим КС грамматику:
 ```
-S -> S^S
-S -> S|S
-S -> S&S
-S -> !S
-S -> (S)
-S -> var
+S -> S&A
+S -> A
+A -> A|B
+A -> B
+B -> B^C
+B -> C
+C -> !S
+C -> (S)
+C -> var
 ```
 
 ### Уберем левую рекурсию:
 ```
-S -> A^S
+S -> AS'
 S -> A
-A -> B|A
+S' -> &AS'
+S' -> &A
+A -> BA'
 A -> B
-B -> C&B
+A' -> |BA'
+A' -> |B
+B -> CB'
 B -> C
+B' -> ^CB'
+B' -> ^C
 C -> !S
 C -> (S)
 C -> var
@@ -35,13 +44,16 @@ C -> var
 ### Уберем правое ветвление:
 ```
 S -> AT
-T -> ^S
+S' -> &AT
+T -> S'
 T -> eps
 A -> BU
-U -> |A
+A' -> |BU
+U -> A'
 U -> eps
-B ->  CV
-V -> &B
+B -> CV
+B' -> ^CV
+V -> B'
 V -> eps
 C -> !S
 C -> (S)
@@ -51,13 +63,13 @@ C -> var
 ### Раскроем некоторые нетерминалы:
 ```
 S -> AT
-T -> ^AT
+T -> &AT
 T -> eps
 A -> BU
 U -> |BU
 U -> eps
 B ->  CV
-V -> &CV
+V -> ^CV
 V -> eps
 C -> !S
 C -> (S)
