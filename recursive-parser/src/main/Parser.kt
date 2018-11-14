@@ -10,7 +10,7 @@ class Parser {
         lex = LexicalAnalyzer(input)
         lex.nextToken()
         val tree = S()
-        if(lex.curToken == END) {
+        if (lex.curToken == END) {
             return tree
         } else {
             throw AssertionError("${lex.curToken} not expected in the end")
@@ -29,10 +29,10 @@ class Parser {
 
     private fun T(): Tree =
             when (lex.curToken) {
-                XOR -> {
+                OR -> {
                     lex.nextToken()
                     Tree("T",
-                            listOf(Tree("^"), A(), T())
+                            listOf(Tree("|"), A(), T())
                     )
                 }
                 RPAREN, END ->
@@ -55,13 +55,13 @@ class Parser {
 
     private fun U(): Tree =
             when (lex.curToken) {
-                OR -> {
+                XOR -> {
                     lex.nextToken()
                     Tree("U",
-                            listOf(Tree("|"), B(), U())
+                            listOf(Tree("^"), B(), U())
                     )
                 }
-                XOR, RPAREN, END ->
+                OR, RPAREN, END ->
                     Tree("U",
                             listOf(Tree("eps"))
                     )
@@ -97,33 +97,45 @@ class Parser {
                     throw AssertionError("${lex.curToken} not expected in V()")
             }
 
-    private fun C() :Tree {
+    private fun C(): Tree {
         when (lex.curToken) {
-            VAR -> {
-                lex.nextToken()
+            VAR, LPAREN -> {
                 return Tree("C",
-                        listOf(Tree("var"))
+                        listOf(D())
                 )
             }
             NOT -> {
                 lex.nextToken()
                 return Tree("C",
-                        listOf(Tree("!"), S())
+                        listOf(Tree("!"), D())
+                )
+            }
+            else ->
+                throw AssertionError("${lex.curToken} not expected in C()")
+        }
+    }
+
+    private fun D(): Tree {
+        when (lex.curToken) {
+            VAR -> {
+                lex.nextToken()
+                return Tree("D",
+                        listOf(Tree("var"))
                 )
             }
             LPAREN -> {
                 lex.nextToken()
                 val sub = S()
-                if(lex.curToken != RPAREN) {
-                    throw AssertionError("${lex.curToken} not expected in C()")
+                if (lex.curToken != RPAREN) {
+                    throw AssertionError("${lex.curToken} not expected in D()")
                 }
                 lex.nextToken()
-                return Tree("C",
+                return Tree("D",
                         listOf(Tree("("), sub, Tree(")"))
                 )
             }
             else ->
-                throw AssertionError("${lex.curToken} not expected in C()")
+                throw AssertionError("${lex.curToken} not expected in D()")
         }
     }
 }

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f83d7d9f-d6b2-48d7-9182-e365e5d1ab26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.kt" afterDir="false" />
-    </list>
+    <list default="true" id="f83d7d9f-d6b2-48d7-9182-e365e5d1ab26" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,57 +14,63 @@
     <session id="-933670061">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="9" />
-          <entry key="kt" value="36" />
+          <entry key="kt" value="43" />
           <entry key="md" value="3" />
           <entry key="png" value="12" />
           <entry key="txt" value="15" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
           <entry key="Image" value="12" />
-          <entry key="Kotlin" value="36" />
+          <entry key="Kotlin" value="43" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="15" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="2649" />
-          <entry key="md" value="708" />
-          <entry key="txt" value="709" />
-          <entry key="xml" value="2" />
+          <entry key="kt" value="3042" />
+          <entry key="md" value="809" />
+          <entry key="txt" value="748" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="2649" />
-          <entry key="Markdown" value="708" />
-          <entry key="PLAIN_TEXT" value="709" />
-          <entry key="XML" value="2" />
+          <entry key="Kotlin" value="3042" />
+          <entry key="Markdown" value="809" />
+          <entry key="PLAIN_TEXT" value="748" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="340">
-                <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <first_editor relative-caret-position="93">
+                <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -79,32 +81,68 @@
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tests/Test.kt">
+        <entry file="file://$PROJECT_DIR$/src/test/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            <state relative-caret-position="-230">
+              <caret line="9" column="29" selection-start-line="9" selection-end-line="10" />
+              <folding>
+                <element signature="e#15#130#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/VisualizationTest.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/LexicalAnalyzer.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="37" column="79" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
+              <folding>
+                <element signature="e#14#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/TreeVisualizer.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/VisualizationTest.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/VisualizationTest.png">
+        <entry file="file://$PROJECT_DIR$/src/test/VisualizationTest.png">
           <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Parser.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="140" column="1" lean-forward="true" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
+              <folding>
+                <element signature="e#14#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -120,6 +158,7 @@
     <findStrings>
       <find>n</find>
       <find>e</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>var</replace>
@@ -132,23 +171,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/tst.txt" />
         <option value="$PROJECT_DIR$/src/main/TreeVisualization.kt" />
         <option value="$PROJECT_DIR$/src/main/TreeVisualizator.kt" />
         <option value="$PROJECT_DIR$/src/text.txt" />
         <option value="$PROJECT_DIR$/src/main/Tree.kt" />
         <option value="$PROJECT_DIR$/src/main/Token.kt" />
-        <option value="$PROJECT_DIR$/src/main/TreeVisualizer.kt" />
         <option value="$PROJECT_DIR$/src/tests/ValidSymbols.txt" />
         <option value="$PROJECT_DIR$/src/Test.kt" />
         <option value="$PROJECT_DIR$/src/tests/WhiteSpacesTest.txt" />
         <option value="$PROJECT_DIR$/src/main/LexicalAnalyzer.kt" />
-        <option value="$PROJECT_DIR$/src/main/Parser.kt" />
-        <option value="$PROJECT_DIR$/src/tests/VisualizationTest.txt" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
-        <option value="$PROJECT_DIR$/src/README.md" />
+        <option value="$PROJECT_DIR$/src/tests/VisualizationTest.txt" />
         <option value="$PROJECT_DIR$/src/tests/Test.kt" />
+        <option value="$PROJECT_DIR$/src/test/Tests.kt" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/LinkedTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/TreeVisualizer.kt" />
+        <option value="$PROJECT_DIR$/src/README.md" />
+        <option value="$PROJECT_DIR$/src/main/Parser.kt" />
+        <option value="$PROJECT_DIR$/src/test/VisualizationTest.txt" />
       </list>
     </option>
   </component>
@@ -166,7 +208,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-162" />
+    <option name="x" value="269" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -176,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,26 +241,30 @@
               <item name="recursive-parser" type="b2602c69:ProjectViewProjectNode" />
               <item name="recursive-parser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541000281879" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542210408162" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../recursive-parsing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trans" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="test" />
+      <recent name="test.resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -234,7 +281,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recursive-parser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.Tests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="recursive-parser" />
       <option name="VM_PARAMETERS" />
@@ -248,9 +309,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Kotlin.MainKt" />
+      <item itemvalue="JUnit.Tests" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +332,11 @@
       <updated>1540917714255</updated>
       <workItem from="1540917718263" duration="725000" />
       <workItem from="1540920013442" duration="22873000" />
-      <workItem from="1540953250539" duration="12075000" />
+      <workItem from="1540953250539" duration="16101000" />
+      <workItem from="1541421405683" duration="53000" />
+      <workItem from="1541495562334" duration="643000" />
+      <workItem from="1541850589763" duration="599000" />
+      <workItem from="1542148778102" duration="8399000" />
     </task>
     <task id="LOCAL-00001" summary="mb done">
       <created>1540987849417</created>
@@ -275,17 +345,38 @@
       <option name="project" value="LOCAL" />
       <updated>1540987849417</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix grammar">
+      <created>1541000533143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541000533144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Tests - 2018.11.14 at 02h 17m 00s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35673000" />
+    <option name="totallyTimeSpent" value="49393000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1046" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26093918" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20971185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -294,16 +385,21 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33442983" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33442983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.40350878" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32894737" />
+      <window_info anchor="bottom" id="Tool Output" order="12" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="13" weight="0.32894737" />
+      <window_info anchor="bottom" id="Log Viewer" order="14" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="15" />
+      <window_info anchor="bottom" id="SOQL Query" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -314,6 +410,41 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20971185" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33442983" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.40350878" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32894737" />
+      <window_info anchor="bottom" id="Tool Output" order="12" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="13" weight="0.32894737" />
+      <window_info anchor="bottom" id="Log Viewer" order="14" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="15" />
+      <window_info anchor="bottom" id="SOQL Query" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -323,16 +454,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mb done" />
-    <option name="LAST_COMMIT_MESSAGE" value="mb done" />
+    <MESSAGE value="fix grammar" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix grammar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/tests/Test.kt</url>
-          <line>192</line>
+          <url>file://$PROJECT_DIR$/src/test/Test.kt</url>
+          <line>260</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/Test.kt</url>
+          <line>224</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -359,13 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/guru/nidi/graphviz-java/0.7.0/graphviz-java-0.7.0.jar!/guru/nidi/graphviz/model/MutableNode.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -380,45 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ex.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/TreeVisualizer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ex.png" />
     <entry file="file://$PROJECT_DIR$/src/tests/WhiteSpacesTest.txt" />
     <entry file="file://$PROJECT_DIR$/src/tests/ValidSymbolsTest.txt" />
-    <entry file="file://$PROJECT_DIR$/src/tst.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Parser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <element signature="e#14#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LexicalAnalyzer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="37" column="79" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
-          <folding>
-            <element signature="e#14#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tst.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/Token.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -426,13 +522,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/text.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/text.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/Tree.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -440,37 +530,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/LinkedTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#14#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/TreeVisualizer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VisualizationTest.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/VisualizationTest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VisualizationTest.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="340">
-            <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <first_editor relative-caret-position="93">
+            <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/Test.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/Parser.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        <state relative-caret-position="518">
+          <caret line="140" column="1" lean-forward="true" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/VisualizationTest.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LexicalAnalyzer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="37" column="79" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
+          <folding>
+            <element signature="e#14#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-230">
+          <caret line="9" column="29" selection-start-line="9" selection-end-line="10" />
+          <folding>
+            <element signature="e#15#130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

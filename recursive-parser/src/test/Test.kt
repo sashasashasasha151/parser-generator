@@ -1,4 +1,4 @@
-package tests
+package test
 
 import main.*
 import java.io.File
@@ -38,6 +38,7 @@ class Test {
             "((((a))))"
     )
     private val validTestsList = listOf(
+            "a|a|b",
             "(!a | b) & a & (a | !(b ^ c)) ^ g",
             "((!a|b&h)|(r^f^(t|i)&(t^v)))&g",
             "(a|s)^((a^b)^(c|c|c|c))",
@@ -57,6 +58,48 @@ class Test {
             "!^a",
             "^ab"
     )
+
+    private fun getRandomExpression(depth: Int): String {
+        if (depth == 0) {
+            return "a"
+        }
+
+        val s = StringBuilder()
+
+        val randomState = rand.nextInt(3)
+
+        when (randomState) {
+            0 -> {
+                s.append("(")
+                s.append(getRandomExpression(depth - 1))
+                s.append(") | (")
+                s.append(getRandomExpression(depth - 1))
+                s.append(")")
+            }
+            1 -> {
+                s.append("(")
+                s.append(getRandomExpression(depth - 1))
+                s.append(") ^ (")
+                s.append(getRandomExpression(depth - 1))
+                s.append(")")
+            }
+            2 -> {
+                s.append("(")
+                s.append(getRandomExpression(depth - 1))
+                s.append(") & (")
+                s.append(getRandomExpression(depth - 1))
+                s.append(")")
+            }
+            else -> {
+                s.append("! (")
+                s.append(getRandomExpression(depth - 1))
+                s.append(")")
+            }
+        }
+
+        return s.toString()
+    }
+
     private val rand = Random()
     private val str = StringBuilder()
     private val parser = Parser()
@@ -199,11 +242,24 @@ class Test {
         println("NotValidTest: OK")
     }
 
+    fun randomValidTests() {
+        try {
+            for (i in 1..10) {
+                for (it in 0..100) {
+                    parser.parse(getRandomExpression(i).byteInputStream())
+                }
+            }
+            println("RandomValidTests: OK")
+        } catch (e: AssertionError) {
+            println("RandomValidTests: FAILED")
+        }
+    }
+
     fun visualizationTest() =
             TreeVisualizer()
                     .showTree(
-                            Parser().parse(FileInputStream(File("src/tests/VisualizationTest.txt"))),
-                            "src/tests/VisualizationTest.png")
+                            Parser().parse(FileInputStream(File("src/test/VisualizationTest.txt"))),
+                            "src/test/VisualizationTest.png")
 
     fun testAll() {
         validSymbols()
@@ -216,6 +272,7 @@ class Test {
         parentheses()
         validExpressions()
         notValidExpressions()
+        randomValidTests()
         visualizationTest()
     }
 }
