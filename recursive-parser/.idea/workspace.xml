@@ -2,61 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f83d7d9f-d6b2-48d7-9182-e365e5d1ab26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/ThrowingErrorListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/RandomSymbols.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/Test.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidLogicValue.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidNumValue.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidPrefixProgram.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trans/src/main/java/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trans/src/main/java/ThrowingErrorListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trans/src/main/java/antlr/PrefixGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/BuildParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/BuildParser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/antlr4/PrefixGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/antlr4/PrefixGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Hello1Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Hello1Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Hello2Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Hello2Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Tester$lexerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Tester$lexerTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/ValidNumValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/ValidNumValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/out/test/classes/ValidPrefixProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/out/test/classes/ValidPrefixProgram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidLogicValue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidLogicValue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidNumValue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidNumValue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidPrefixProgram.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ValidPrefixProgram.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/Hello1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/Hello1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/Hello2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/Hello2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello10.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello6.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello8.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello8.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/test/kotlin/ktProgs/compiled/hello9.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/TreeVisualizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TreeVisualizer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../trans/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../trans/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/Logic.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicBaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/gen/antlr4/LogicVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/LogicVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/antlr4/Logic.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/antlr4/MarkupLexer.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/antlr4/MarkupLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/src/main/java/antlr4/MarkupParser.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/LogicVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/Logic.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicBaseListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicBaseVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicLexer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$Add_andContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$Add_orContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$Add_xorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$ExpressionContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$L_expressionContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$N_expressionContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser$N_n_expressionContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trans/target/classes/antlr4/LogicVisitor.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,10 +43,11 @@
     <session id="-933670061">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -81,7 +55,7 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -180,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///opt/jdk1.8.0_191/src.zip!/java/util/SortedSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
+            <state relative-caret-position="2618">
               <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
             </state>
           </provider>
@@ -285,8 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,6 +287,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,6 +381,7 @@
       <workItem from="1543316511084" duration="46000" />
       <workItem from="1543316608040" duration="618000" />
       <workItem from="1543329391425" duration="1846000" />
+      <workItem from="1543377256460" duration="91000" />
     </task>
     <task id="LOCAL-00001" summary="mb done">
       <created>1540987849417</created>
@@ -438,7 +413,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54194000" />
+    <option name="totallyTimeSpent" value="54285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,7 +427,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1046" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21611527" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21824974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -598,6 +573,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LexicalAnalyzer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="37" column="79" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
+          <folding>
+            <element signature="e#14#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/TreeVisualizer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_191/src.zip!/java/util/SortedSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/VisualizationTest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -615,37 +621,6 @@
           <folding>
             <element signature="e#14#60#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///opt/jdk1.8.0_191/src.zip!/java/util/SortedSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/TreeVisualizer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LexicalAnalyzer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="79" selection-start-line="37" selection-start-column="79" selection-end-line="37" selection-end-column="79" />
-          <folding>
-            <element signature="e#14#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>

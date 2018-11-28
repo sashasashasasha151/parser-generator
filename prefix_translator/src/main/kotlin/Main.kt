@@ -5,7 +5,8 @@ import java.io.IOException
 import java.util.*
 
 fun main(args: Array<String>) {
-    val streams = CharStreams.fromString("def a 2 def b 4 def c + b 6 if < a b (print c = b 55) if true (print > b c)")
+//    val streams = CharStreams.fromString("def a 2 def b 4 def c + b 6 if < a b (print c = b 55) (if | true false (print > b c))")
+    val streams = CharStreams.fromString("def a 0 def b 5 while > b 0 (print b = b - b 1)")
     val lexer = PrefixGrammarLexer(streams)
 
 //    lexer.removeErrorListeners()

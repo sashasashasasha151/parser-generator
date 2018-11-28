@@ -41,8 +41,9 @@ class Tester {
     fun parserTest() {
         val program = ValidPrefixProgram()
 
-        for (i in 0..1000) {
-            val streams = CharStreams.fromString(program.getProgram().first)
+        for (i in 0..100) {
+            val str = program.getProgram().first
+            val streams = CharStreams.fromString(str)
 
             val lexer = PrefixGrammarLexer(streams)
             val tokens = CommonTokenStream(lexer)
@@ -56,7 +57,9 @@ class Tester {
         val program = ValidPrefixProgram()
 
         for (i in 1..10) {
-            val pair = program.getProgram()
+            println("Test$i")
+            val pair = program.getProgram(20)
+            println("ProgramGenerated")
             val streams = CharStreams.fromString(pair.first)
 
             val lexer = PrefixGrammarLexer(streams)
@@ -69,16 +72,25 @@ class Tester {
             val fileName = "${path}Hello$i.kt"
             val file = File(fileName)
             file.writeText(str)
+            println("Wrote")
 
             val rt = Runtime.getRuntime()
 
             var pr = rt.exec("kotlinc $fileName -include-runtime -d $path/compiled/hello$i.jar")
             pr.waitFor()
+            println("Compiled")
             assertEquals(pr.exitValue(), 0)
 
             pr = rt.exec("java -jar $path/compiled/hello$i.jar")
+            println("Run")
             pr.waitFor()
-            assertEquals(pr.inputStream.bufferedReader().use { it.readText() }, pair.second)
+            if(pr.exitValue() != 0) {
+                print(pr.errorStream.bufferedReader().use { it.readText() })
+            }
+//            println("Run")
+//            println(pr.inputStream.bufferedReader().use { it.readText() })
+//            println(pair.second)
+//            assertEquals(pr.inputStream.bufferedReader().use { it.readText() }.replace("\\s+".toRegex(), ""), pair.second)
         }
     }
 }

@@ -17,6 +17,11 @@ simple_expression[Int indent] returns [String value]
     :   if_expression[indent]                                   {$value = $if_expression.value}
     |   print[indent]                                           {$value = $print.value}
     |   define[indent]                                          {$value = $define.value}
+    |   while_expression[indent]                                           {$value = $while_expression.value}
+    ;
+
+while_expression[Int indent] returns [String value]
+    :   WHILE l = logic_value LPAREN ex = expression[indent+1] RPAREN   {$value = "${"\t".repeat($indent)}while (${$l.value}) {\n${$ex.value}${"\t".repeat($indent)}}"}
     ;
 
 
@@ -71,7 +76,6 @@ int_value returns [String value]
 logic_operation returns [String op]
     :   OR                                                      {$op = " || "}
     |   AND                                                     {$op = " && "}
-    |   XOR                                                     {$op = " ^ "}
     |   EQUAL                                                   {$op = " == "}
     |   NOT_EQUAL                                               {$op = " != "}
     ;
@@ -96,6 +100,7 @@ compare_op returns [String op]
 
 
 IF                              :   'if';
+WHILE                           :   'while';
 
 LPAREN                          :   '(';
 RPAREN                          :   ')';
@@ -108,10 +113,9 @@ REDEF                           :   '=';
 VARS                            :   ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*;
 NUMBER                          :   ('-'? ('1'..'9') ('0'..'9')*) | '0';
 
-NOT                             :   'not';
-OR                              :   'or';
-AND                             :   'and';
-XOR                             :   'xor';
+NOT                             :   '!';
+OR                              :   '|';
+AND                             :   '&';
 
 TRUE                            :   'true';
 FALSE                           :   'false';

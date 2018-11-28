@@ -8,10 +8,9 @@ class RandomSymbols {
         ")",
         "print",
         "def",
-        "or",
-        "and",
-        "xor",
-        "not",
+        "|",
+        "&",
+        "!",
         "true",
         "false",
         "+",
@@ -41,7 +40,7 @@ class RandomSymbols {
         "ADDWDW_ewfwef_F_E"
     )
 
-    val not_valid = arrayListOf("@", "#", "$", "%", ";", "fe%", "!!!", "0ff", "<>", "|")
+    val not_valid = arrayListOf("@", "#", "$", "%", ";", "fe%", "!!!", "0ff", "<>")
 
     fun getValidSymbols(): String {
         val sb = StringBuilder()

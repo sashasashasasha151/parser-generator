@@ -19,6 +19,7 @@ object solver : TypeDeclarator {
 	override val classesByName : List<KClass<*>> = listOf(PrefixGrammarParser.StartContext::class,
                                                        PrefixGrammarParser.ExpressionContext::class,
                                                        PrefixGrammarParser.Simple_expressionContext::class,
+                                                       PrefixGrammarParser.While_expressionContext::class,
                                                        PrefixGrammarParser.If_expressionContext::class,
                                                        PrefixGrammarParser.Else_expressionContext::class,
                                                        PrefixGrammarParser.PrintContext::class,
@@ -47,17 +48,17 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
     enum class Tokens(val id: Int) {
         EOF(-1),
         IF(1),
-        LPAREN(2),
-        RPAREN(3),
-        PRINT(4),
-        DEFINE(5),
-        REDEF(6),
-        VARS(7),
-        NUMBER(8),
-        NOT(9),
-        OR(10),
-        AND(11),
-        XOR(12),
+        WHILE(2),
+        LPAREN(3),
+        RPAREN(4),
+        PRINT(5),
+        DEFINE(6),
+        REDEF(7),
+        VARS(8),
+        NUMBER(9),
+        NOT(10),
+        OR(11),
+        AND(12),
         TRUE(13),
         FALSE(14),
         PLUS(15),
@@ -77,16 +78,17 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
         RULE_start(0),
         RULE_expression(1),
         RULE_simple_expression(2),
-        RULE_if_expression(3),
-        RULE_else_expression(4),
-        RULE_print(5),
-        RULE_define(6),
-        RULE_variable(7),
-        RULE_logic_value(8),
-        RULE_int_value(9),
-        RULE_logic_operation(10),
-        RULE_int_operations(11),
-        RULE_compare_op(12)
+        RULE_while_expression(3),
+        RULE_if_expression(4),
+        RULE_else_expression(5),
+        RULE_print(6),
+        RULE_define(7),
+        RULE_variable(8),
+        RULE_logic_value(9),
+        RULE_int_value(10),
+        RULE_logic_operation(11),
+        RULE_int_operations(12),
+        RULE_compare_op(13)
     }
 
 	companion object {
@@ -94,30 +96,30 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
     	protected val sharedContextCache = PredictionContextCache()
 
         val ruleNames = arrayOf("start", "expression", "simple_expression", 
-                                "if_expression", "else_expression", "print", 
-                                "define", "variable", "logic_value", "int_value", 
-                                "logic_operation", "int_operations", "compare_op")
+                                "while_expression", "if_expression", "else_expression", 
+                                "print", "define", "variable", "logic_value", 
+                                "int_value", "logic_operation", "int_operations", 
+                                "compare_op")
 
         private val LITERAL_NAMES = Arrays.asList<String?>(null, "'if'", 
-                                                           "'('", "')'", 
-                                                           "'print'", "'def'", 
-                                                           "'='", null, 
-                                                           null, "'not'", 
-                                                           "'or'", "'and'", 
-                                                           "'xor'", "'true'", 
-                                                           "'false'", "'+'", 
-                                                           "'-'", "'*'", 
-                                                           "'/'", "'=='", 
-                                                           "'!='", "'<'", 
-                                                           "'<='", "'>'", 
-                                                           "'>='")
+                                                           "'while'", "'('", 
+                                                           "')'", "'print'", 
+                                                           "'def'", "'='", 
+                                                           null, null, "'!'", 
+                                                           "'|'", "'&'", 
+                                                           "'true'", "'false'", 
+                                                           "'+'", "'-'", 
+                                                           "'*'", "'/'", 
+                                                           "'=='", "'!='", 
+                                                           "'<'", "'<='", 
+                                                           "'>'", "'>='")
         private val SYMBOLIC_NAMES = Arrays.asList<String?>(null, "IF", 
-                                                            "LPAREN", "RPAREN", 
-                                                            "PRINT", "DEFINE", 
-                                                            "REDEF", "VARS", 
-                                                            "NUMBER", "NOT", 
-                                                            "OR", "AND", 
-                                                            "XOR", "TRUE", 
+                                                            "WHILE", "LPAREN", 
+                                                            "RPAREN", "PRINT", 
+                                                            "DEFINE", "REDEF", 
+                                                            "VARS", "NUMBER", 
+                                                            "NOT", "OR", 
+                                                            "AND", "TRUE", 
                                                             "FALSE", "PLUS", 
                                                             "MINUS", "MULL", 
                                                             "DIV", "EQUAL", 
@@ -142,85 +144,89 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 
         private val serializedIntegersATN =
         	arrayOf(3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 
-        	3, 27, 167, 4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 
+        	3, 27, 177, 4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 
         	6, 9, 6, 4, 7, 9, 7, 4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 
-        	9, 11, 4, 12, 9, 12, 4, 13, 9, 13, 4, 14, 9, 14, 3, 2, 3, 2, 3, 
-        	2, 3, 2, 5, 2, 33, 10, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 3, 40, 
-        	10, 3, 12, 3, 14, 3, 43, 11, 3, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 
-        	4, 3, 4, 3, 4, 3, 4, 5, 4, 54, 10, 4, 3, 5, 3, 5, 3, 5, 3, 5, 3, 
-        	5, 3, 5, 3, 5, 3, 5, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5, 6, 
-        	70, 10, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 
-        	3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 5, 8, 86, 10, 8, 3, 9, 3, 9, 3, 9, 
-        	3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 96, 10, 9, 3, 10, 3, 10, 3, 
-        	10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 
-        	10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 5, 
-        	10, 118, 10, 10, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 
-        	3, 11, 3, 11, 5, 11, 129, 10, 11, 3, 12, 3, 12, 3, 12, 3, 12, 3, 
+        	9, 11, 4, 12, 9, 12, 4, 13, 9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 
+        	3, 2, 3, 2, 3, 2, 3, 2, 5, 2, 35, 10, 2, 3, 3, 3, 3, 3, 3, 3, 3, 
+        	3, 3, 7, 3, 42, 10, 3, 12, 3, 14, 3, 45, 11, 3, 3, 4, 3, 4, 3, 
+        	4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 5, 4, 
+        	59, 10, 4, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 6, 3, 6, 
+        	3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 
+        	7, 3, 7, 5, 7, 82, 10, 7, 3, 8, 3, 8, 3, 8, 3, 8, 3, 9, 3, 9, 3, 
+        	9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 98, 10, 9, 3, 
+        	10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 5, 10, 108, 
+        	10, 10, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 
+        	3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3, 11, 
+        	3, 11, 3, 11, 3, 11, 5, 11, 130, 10, 11, 3, 12, 3, 12, 3, 12, 3, 
         	12, 3, 12, 3, 12, 3, 12, 3, 12, 3, 12, 5, 12, 141, 10, 12, 3, 13, 
         	3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 5, 13, 151, 10, 
-        	13, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 
-        	14, 3, 14, 3, 14, 3, 14, 5, 14, 165, 10, 14, 3, 14, 2, 2, 15, 2, 
-        	4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 2, 2, 2, 180, 2, 32, 
-        	3, 2, 2, 2, 4, 34, 3, 2, 2, 2, 6, 53, 3, 2, 2, 2, 8, 55, 3, 2, 
-        	2, 2, 10, 69, 3, 2, 2, 2, 12, 71, 3, 2, 2, 2, 14, 85, 3, 2, 2, 
-        	2, 16, 95, 3, 2, 2, 2, 18, 117, 3, 2, 2, 2, 20, 128, 3, 2, 2, 2, 
-        	22, 140, 3, 2, 2, 2, 24, 150, 3, 2, 2, 2, 26, 164, 3, 2, 2, 2, 
-        	28, 29, 5, 4, 3, 2, 29, 30, 8, 2, 1, 2, 30, 33, 3, 2, 2, 2, 31, 
-        	33, 8, 2, 1, 2, 32, 28, 3, 2, 2, 2, 32, 31, 3, 2, 2, 2, 33, 3, 
-        	3, 2, 2, 2, 34, 35, 5, 6, 4, 2, 35, 41, 8, 3, 1, 2, 36, 37, 5, 
-        	6, 4, 2, 37, 38, 8, 3, 1, 2, 38, 40, 3, 2, 2, 2, 39, 36, 3, 2, 
-        	2, 2, 40, 43, 3, 2, 2, 2, 41, 39, 3, 2, 2, 2, 41, 42, 3, 2, 2, 
-        	2, 42, 5, 3, 2, 2, 2, 43, 41, 3, 2, 2, 2, 44, 45, 5, 8, 5, 2, 45, 
-        	46, 8, 4, 1, 2, 46, 54, 3, 2, 2, 2, 47, 48, 5, 12, 7, 2, 48, 49, 
-        	8, 4, 1, 2, 49, 54, 3, 2, 2, 2, 50, 51, 5, 14, 8, 2, 51, 52, 8, 
-        	4, 1, 2, 52, 54, 3, 2, 2, 2, 53, 44, 3, 2, 2, 2, 53, 47, 3, 2, 
-        	2, 2, 53, 50, 3, 2, 2, 2, 54, 7, 3, 2, 2, 2, 55, 56, 7, 3, 2, 2, 
-        	56, 57, 5, 18, 10, 2, 57, 58, 7, 4, 2, 2, 58, 59, 5, 4, 3, 2, 59, 
-        	60, 7, 5, 2, 2, 60, 61, 5, 10, 6, 2, 61, 62, 8, 5, 1, 2, 62, 9, 
-        	3, 2, 2, 2, 63, 64, 7, 4, 2, 2, 64, 65, 5, 4, 3, 2, 65, 66, 7, 
-        	5, 2, 2, 66, 67, 8, 6, 1, 2, 67, 70, 3, 2, 2, 2, 68, 70, 8, 6, 
-        	1, 2, 69, 63, 3, 2, 2, 2, 69, 68, 3, 2, 2, 2, 70, 11, 3, 2, 2, 
-        	2, 71, 72, 7, 6, 2, 2, 72, 73, 5, 16, 9, 2, 73, 74, 8, 7, 1, 2, 
-        	74, 13, 3, 2, 2, 2, 75, 76, 7, 7, 2, 2, 76, 77, 7, 9, 2, 2, 77, 
-        	78, 5, 16, 9, 2, 78, 79, 8, 8, 1, 2, 79, 86, 3, 2, 2, 2, 80, 81, 
-        	7, 8, 2, 2, 81, 82, 7, 9, 2, 2, 82, 83, 5, 16, 9, 2, 83, 84, 8, 
-        	8, 1, 2, 84, 86, 3, 2, 2, 2, 85, 75, 3, 2, 2, 2, 85, 80, 3, 2, 
-        	2, 2, 86, 15, 3, 2, 2, 2, 87, 88, 5, 18, 10, 2, 88, 89, 8, 9, 1, 
-        	2, 89, 96, 3, 2, 2, 2, 90, 91, 5, 20, 11, 2, 91, 92, 8, 9, 1, 2, 
-        	92, 96, 3, 2, 2, 2, 93, 94, 7, 9, 2, 2, 94, 96, 8, 9, 1, 2, 95, 
-        	87, 3, 2, 2, 2, 95, 90, 3, 2, 2, 2, 95, 93, 3, 2, 2, 2, 96, 17, 
-        	3, 2, 2, 2, 97, 98, 5, 22, 12, 2, 98, 99, 5, 18, 10, 2, 99, 100, 
-        	5, 18, 10, 2, 100, 101, 8, 10, 1, 2, 101, 118, 3, 2, 2, 2, 102, 
-        	103, 7, 11, 2, 2, 103, 104, 5, 18, 10, 2, 104, 105, 8, 10, 1, 2, 
-        	105, 118, 3, 2, 2, 2, 106, 107, 7, 9, 2, 2, 107, 118, 8, 10, 1, 
-        	2, 108, 109, 7, 15, 2, 2, 109, 118, 8, 10, 1, 2, 110, 111, 7, 16, 
-        	2, 2, 111, 118, 8, 10, 1, 2, 112, 113, 5, 26, 14, 2, 113, 114, 
-        	5, 20, 11, 2, 114, 115, 5, 20, 11, 2, 115, 116, 8, 10, 1, 2, 116, 
-        	118, 3, 2, 2, 2, 117, 97, 3, 2, 2, 2, 117, 102, 3, 2, 2, 2, 117, 
-        	106, 3, 2, 2, 2, 117, 108, 3, 2, 2, 2, 117, 110, 3, 2, 2, 2, 117, 
-        	112, 3, 2, 2, 2, 118, 19, 3, 2, 2, 2, 119, 120, 5, 24, 13, 2, 120, 
-        	121, 5, 20, 11, 2, 121, 122, 5, 20, 11, 2, 122, 123, 8, 11, 1, 
-        	2, 123, 129, 3, 2, 2, 2, 124, 125, 7, 9, 2, 2, 125, 129, 8, 11, 
-        	1, 2, 126, 127, 7, 10, 2, 2, 127, 129, 8, 11, 1, 2, 128, 119, 3, 
-        	2, 2, 2, 128, 124, 3, 2, 2, 2, 128, 126, 3, 2, 2, 2, 129, 21, 3, 
-        	2, 2, 2, 130, 131, 7, 12, 2, 2, 131, 141, 8, 12, 1, 2, 132, 133, 
-        	7, 13, 2, 2, 133, 141, 8, 12, 1, 2, 134, 135, 7, 14, 2, 2, 135, 
-        	141, 8, 12, 1, 2, 136, 137, 7, 21, 2, 2, 137, 141, 8, 12, 1, 2, 
-        	138, 139, 7, 22, 2, 2, 139, 141, 8, 12, 1, 2, 140, 130, 3, 2, 2, 
-        	2, 140, 132, 3, 2, 2, 2, 140, 134, 3, 2, 2, 2, 140, 136, 3, 2, 
-        	2, 2, 140, 138, 3, 2, 2, 2, 141, 23, 3, 2, 2, 2, 142, 143, 7, 17, 
-        	2, 2, 143, 151, 8, 13, 1, 2, 144, 145, 7, 18, 2, 2, 145, 151, 8, 
-        	13, 1, 2, 146, 147, 7, 19, 2, 2, 147, 151, 8, 13, 1, 2, 148, 149, 
-        	7, 20, 2, 2, 149, 151, 8, 13, 1, 2, 150, 142, 3, 2, 2, 2, 150, 
-        	144, 3, 2, 2, 2, 150, 146, 3, 2, 2, 2, 150, 148, 3, 2, 2, 2, 151, 
-        	25, 3, 2, 2, 2, 152, 153, 7, 21, 2, 2, 153, 165, 8, 14, 1, 2, 154, 
-        	155, 7, 22, 2, 2, 155, 165, 8, 14, 1, 2, 156, 157, 7, 23, 2, 2, 
-        	157, 165, 8, 14, 1, 2, 158, 159, 7, 24, 2, 2, 159, 165, 8, 14, 
-        	1, 2, 160, 161, 7, 25, 2, 2, 161, 165, 8, 14, 1, 2, 162, 163, 7, 
-        	26, 2, 2, 163, 165, 8, 14, 1, 2, 164, 152, 3, 2, 2, 2, 164, 154, 
-        	3, 2, 2, 2, 164, 156, 3, 2, 2, 2, 164, 158, 3, 2, 2, 2, 164, 160, 
-        	3, 2, 2, 2, 164, 162, 3, 2, 2, 2, 165, 27, 3, 2, 2, 2, 13, 32, 
-        	41, 53, 69, 85, 95, 117, 128, 140, 150, 164)
+        	13, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 5, 
+        	14, 161, 10, 14, 3, 15, 3, 15, 3, 15, 3, 15, 3, 15, 3, 15, 3, 15, 
+        	3, 15, 3, 15, 3, 15, 3, 15, 3, 15, 5, 15, 175, 10, 15, 3, 15, 2, 
+        	2, 16, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 2, 2, 
+        	2, 189, 2, 34, 3, 2, 2, 2, 4, 36, 3, 2, 2, 2, 6, 58, 3, 2, 2, 2, 
+        	8, 60, 3, 2, 2, 2, 10, 67, 3, 2, 2, 2, 12, 81, 3, 2, 2, 2, 14, 
+        	83, 3, 2, 2, 2, 16, 97, 3, 2, 2, 2, 18, 107, 3, 2, 2, 2, 20, 129, 
+        	3, 2, 2, 2, 22, 140, 3, 2, 2, 2, 24, 150, 3, 2, 2, 2, 26, 160, 
+        	3, 2, 2, 2, 28, 174, 3, 2, 2, 2, 30, 31, 5, 4, 3, 2, 31, 32, 8, 
+        	2, 1, 2, 32, 35, 3, 2, 2, 2, 33, 35, 8, 2, 1, 2, 34, 30, 3, 2, 
+        	2, 2, 34, 33, 3, 2, 2, 2, 35, 3, 3, 2, 2, 2, 36, 37, 5, 6, 4, 2, 
+        	37, 43, 8, 3, 1, 2, 38, 39, 5, 6, 4, 2, 39, 40, 8, 3, 1, 2, 40, 
+        	42, 3, 2, 2, 2, 41, 38, 3, 2, 2, 2, 42, 45, 3, 2, 2, 2, 43, 41, 
+        	3, 2, 2, 2, 43, 44, 3, 2, 2, 2, 44, 5, 3, 2, 2, 2, 45, 43, 3, 2, 
+        	2, 2, 46, 47, 5, 10, 6, 2, 47, 48, 8, 4, 1, 2, 48, 59, 3, 2, 2, 
+        	2, 49, 50, 5, 14, 8, 2, 50, 51, 8, 4, 1, 2, 51, 59, 3, 2, 2, 2, 
+        	52, 53, 5, 16, 9, 2, 53, 54, 8, 4, 1, 2, 54, 59, 3, 2, 2, 2, 55, 
+        	56, 5, 8, 5, 2, 56, 57, 8, 4, 1, 2, 57, 59, 3, 2, 2, 2, 58, 46, 
+        	3, 2, 2, 2, 58, 49, 3, 2, 2, 2, 58, 52, 3, 2, 2, 2, 58, 55, 3, 
+        	2, 2, 2, 59, 7, 3, 2, 2, 2, 60, 61, 7, 4, 2, 2, 61, 62, 5, 20, 
+        	11, 2, 62, 63, 7, 5, 2, 2, 63, 64, 5, 4, 3, 2, 64, 65, 7, 6, 2, 
+        	2, 65, 66, 8, 5, 1, 2, 66, 9, 3, 2, 2, 2, 67, 68, 7, 3, 2, 2, 68, 
+        	69, 5, 20, 11, 2, 69, 70, 7, 5, 2, 2, 70, 71, 5, 4, 3, 2, 71, 72, 
+        	7, 6, 2, 2, 72, 73, 5, 12, 7, 2, 73, 74, 8, 6, 1, 2, 74, 11, 3, 
+        	2, 2, 2, 75, 76, 7, 5, 2, 2, 76, 77, 5, 4, 3, 2, 77, 78, 7, 6, 
+        	2, 2, 78, 79, 8, 7, 1, 2, 79, 82, 3, 2, 2, 2, 80, 82, 8, 7, 1, 
+        	2, 81, 75, 3, 2, 2, 2, 81, 80, 3, 2, 2, 2, 82, 13, 3, 2, 2, 2, 
+        	83, 84, 7, 7, 2, 2, 84, 85, 5, 18, 10, 2, 85, 86, 8, 8, 1, 2, 86, 
+        	15, 3, 2, 2, 2, 87, 88, 7, 8, 2, 2, 88, 89, 7, 10, 2, 2, 89, 90, 
+        	5, 18, 10, 2, 90, 91, 8, 9, 1, 2, 91, 98, 3, 2, 2, 2, 92, 93, 7, 
+        	9, 2, 2, 93, 94, 7, 10, 2, 2, 94, 95, 5, 18, 10, 2, 95, 96, 8, 
+        	9, 1, 2, 96, 98, 3, 2, 2, 2, 97, 87, 3, 2, 2, 2, 97, 92, 3, 2, 
+        	2, 2, 98, 17, 3, 2, 2, 2, 99, 100, 5, 20, 11, 2, 100, 101, 8, 10, 
+        	1, 2, 101, 108, 3, 2, 2, 2, 102, 103, 5, 22, 12, 2, 103, 104, 8, 
+        	10, 1, 2, 104, 108, 3, 2, 2, 2, 105, 106, 7, 10, 2, 2, 106, 108, 
+        	8, 10, 1, 2, 107, 99, 3, 2, 2, 2, 107, 102, 3, 2, 2, 2, 107, 105, 
+        	3, 2, 2, 2, 108, 19, 3, 2, 2, 2, 109, 110, 5, 24, 13, 2, 110, 111, 
+        	5, 20, 11, 2, 111, 112, 5, 20, 11, 2, 112, 113, 8, 11, 1, 2, 113, 
+        	130, 3, 2, 2, 2, 114, 115, 7, 12, 2, 2, 115, 116, 5, 20, 11, 2, 
+        	116, 117, 8, 11, 1, 2, 117, 130, 3, 2, 2, 2, 118, 119, 7, 10, 2, 
+        	2, 119, 130, 8, 11, 1, 2, 120, 121, 7, 15, 2, 2, 121, 130, 8, 11, 
+        	1, 2, 122, 123, 7, 16, 2, 2, 123, 130, 8, 11, 1, 2, 124, 125, 5, 
+        	28, 15, 2, 125, 126, 5, 22, 12, 2, 126, 127, 5, 22, 12, 2, 127, 
+        	128, 8, 11, 1, 2, 128, 130, 3, 2, 2, 2, 129, 109, 3, 2, 2, 2, 129, 
+        	114, 3, 2, 2, 2, 129, 118, 3, 2, 2, 2, 129, 120, 3, 2, 2, 2, 129, 
+        	122, 3, 2, 2, 2, 129, 124, 3, 2, 2, 2, 130, 21, 3, 2, 2, 2, 131, 
+        	132, 5, 26, 14, 2, 132, 133, 5, 22, 12, 2, 133, 134, 5, 22, 12, 
+        	2, 134, 135, 8, 12, 1, 2, 135, 141, 3, 2, 2, 2, 136, 137, 7, 10, 
+        	2, 2, 137, 141, 8, 12, 1, 2, 138, 139, 7, 11, 2, 2, 139, 141, 8, 
+        	12, 1, 2, 140, 131, 3, 2, 2, 2, 140, 136, 3, 2, 2, 2, 140, 138, 
+        	3, 2, 2, 2, 141, 23, 3, 2, 2, 2, 142, 143, 7, 13, 2, 2, 143, 151, 
+        	8, 13, 1, 2, 144, 145, 7, 14, 2, 2, 145, 151, 8, 13, 1, 2, 146, 
+        	147, 7, 21, 2, 2, 147, 151, 8, 13, 1, 2, 148, 149, 7, 22, 2, 2, 
+        	149, 151, 8, 13, 1, 2, 150, 142, 3, 2, 2, 2, 150, 144, 3, 2, 2, 
+        	2, 150, 146, 3, 2, 2, 2, 150, 148, 3, 2, 2, 2, 151, 25, 3, 2, 2, 
+        	2, 152, 153, 7, 17, 2, 2, 153, 161, 8, 14, 1, 2, 154, 155, 7, 18, 
+        	2, 2, 155, 161, 8, 14, 1, 2, 156, 157, 7, 19, 2, 2, 157, 161, 8, 
+        	14, 1, 2, 158, 159, 7, 20, 2, 2, 159, 161, 8, 14, 1, 2, 160, 152, 
+        	3, 2, 2, 2, 160, 154, 3, 2, 2, 2, 160, 156, 3, 2, 2, 2, 160, 158, 
+        	3, 2, 2, 2, 161, 27, 3, 2, 2, 2, 162, 163, 7, 21, 2, 2, 163, 175, 
+        	8, 15, 1, 2, 164, 165, 7, 22, 2, 2, 165, 175, 8, 15, 1, 2, 166, 
+        	167, 7, 23, 2, 2, 167, 175, 8, 15, 1, 2, 168, 169, 7, 24, 2, 2, 
+        	169, 175, 8, 15, 1, 2, 170, 171, 7, 25, 2, 2, 171, 175, 8, 15, 
+        	1, 2, 172, 173, 7, 26, 2, 2, 173, 175, 8, 15, 1, 2, 174, 162, 3, 
+        	2, 2, 2, 174, 164, 3, 2, 2, 2, 174, 166, 3, 2, 2, 2, 174, 168, 
+        	3, 2, 2, 2, 174, 170, 3, 2, 2, 2, 174, 172, 3, 2, 2, 2, 175, 29, 
+        	3, 2, 2, 2, 13, 34, 43, 58, 81, 97, 107, 129, 140, 150, 160, 174)
         val ATN = ATNDeserializer().deserializeIntegers(serializedIntegersATN)
         init {
         	decisionToDFA = Array<DFA>(ATN.numberOfDecisions, {
@@ -232,6 +238,7 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 	}
 
     private val IF = Tokens.IF.id
+    private val WHILE = Tokens.WHILE.id
     private val LPAREN = Tokens.LPAREN.id
     private val RPAREN = Tokens.RPAREN.id
     private val PRINT = Tokens.PRINT.id
@@ -242,7 +249,6 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
     private val NOT = Tokens.NOT.id
     private val OR = Tokens.OR.id
     private val AND = Tokens.AND.id
-    private val XOR = Tokens.XOR.id
     private val TRUE = Tokens.TRUE.id
     private val FALSE = Tokens.FALSE.id
     private val PLUS = Tokens.PLUS.id
@@ -271,25 +277,19 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun findExpression() : ExpressionContext? = getRuleContext(solver.getType("ExpressionContext"),0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterStart(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitStart(this)
-		}
 	}
 
 	fun  start() : StartContext {
 		var _localctx : StartContext = StartContext(context, state)
 		enterRule(_localctx, 0, Rules.RULE_start.id)
 		try {
-			this.state = 30
+			this.state = 32
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
-			IF , PRINT , DEFINE , REDEF  ->  /*LL1AltBlock*/{
+			IF , WHILE , PRINT , DEFINE , REDEF  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 26
+			this.state = 28
 			(_localctx as StartContext).expression = expression(1)
 			_localctx.value = "fun main(args: Array<String>) {\n${(_localctx as StartContext).expression.value}}"
 			}}
@@ -325,12 +325,6 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterExpression(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitExpression(this)
-		}
 	}
 
 	fun  expression(indent : Int) : ExpressionContext {
@@ -340,21 +334,21 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 32
+			this.state = 34
 			(_localctx as ExpressionContext).simple_expression = simple_expression(indent)
 			_localctx.value = (_localctx as ExpressionContext).simple_expression.value + "\n"
-			this.state = 39
+			this.state = 41
 			errorHandler.sync(this);
 			_la = _input!!.LA(1)
-			while ((((_la) and 0x3f.inv()) == 0 && ((1L shl _la) and ((1L shl IF) or (1L shl PRINT) or (1L shl DEFINE) or (1L shl REDEF))) != 0L)) {
+			while ((((_la) and 0x3f.inv()) == 0 && ((1L shl _la) and ((1L shl IF) or (1L shl WHILE) or (1L shl PRINT) or (1L shl DEFINE) or (1L shl REDEF))) != 0L)) {
 				if (true){
 				if (true){
-				this.state = 34
+				this.state = 36
 				(_localctx as ExpressionContext).simple_expression = simple_expression(indent)
 				_localctx.value += (_localctx as ExpressionContext).simple_expression.value + "\n"
 				}
 				}
-				this.state = 41
+				this.state = 43
 				errorHandler.sync(this)
 				_la = _input!!.LA(1)
 			}
@@ -380,18 +374,14 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		var if_expression: If_expressionContext by Delegates.notNull()
 		var print: PrintContext by Delegates.notNull()
 		var define: DefineContext by Delegates.notNull()
+		var while_expression: While_expressionContext by Delegates.notNull()
 		fun findIf_expression() : If_expressionContext? = getRuleContext(solver.getType("If_expressionContext"),0)
 		fun findPrint() : PrintContext? = getRuleContext(solver.getType("PrintContext"),0)
 		fun findDefine() : DefineContext? = getRuleContext(solver.getType("DefineContext"),0)
+		fun findWhile_expression() : While_expressionContext? = getRuleContext(solver.getType("While_expressionContext"),0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){ ; }
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
-		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterSimple_expression(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitSimple_expression(this)
 		}
 	}
 
@@ -399,31 +389,87 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		var _localctx : Simple_expressionContext = Simple_expressionContext(context, state, indent)
 		enterRule(_localctx, 4, Rules.RULE_simple_expression.id)
 		try {
-			this.state = 51
+			this.state = 56
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			IF  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 42
+			this.state = 44
 			(_localctx as Simple_expressionContext).if_expression = if_expression(indent)
 			_localctx.value = (_localctx as Simple_expressionContext).if_expression.value
 			}}
 			PRINT  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 45
+			this.state = 47
 			(_localctx as Simple_expressionContext).print = print(indent)
 			_localctx.value = (_localctx as Simple_expressionContext).print.value
 			}}
 			DEFINE , REDEF  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 48
+			this.state = 50
 			(_localctx as Simple_expressionContext).define = define(indent)
 			_localctx.value = (_localctx as Simple_expressionContext).define.value
 			}}
+			WHILE  ->  /*LL1AltBlock*/{
+			enterOuterAlt(_localctx, 4)
+			if (true){
+			this.state = 53
+			(_localctx as Simple_expressionContext).while_expression = while_expression(indent)
+			_localctx.value = (_localctx as Simple_expressionContext).while_expression.value
+			}}
 			else -> throw NoViableAltException(this)
+			}
+		}
+		catch (re: RecognitionException) {
+			_localctx.exception = re
+			errorHandler.reportError(this, re)
+			errorHandler.recover(this, re)
+		}
+		finally {
+			exitRule()
+		}
+		return _localctx
+	}
+
+	open class While_expressionContext : ParserRuleContext {
+	    override var ruleIndex: Int
+	        get() = Rules.RULE_while_expression.id
+	        set(value) { throw RuntimeException() }
+		var indent : Int by Delegates.notNull()
+		var value : String by Delegates.notNull()
+		var l: Logic_valueContext by Delegates.notNull()
+		var ex: ExpressionContext by Delegates.notNull()
+		fun WHILE() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.WHILE.id, 0)
+		fun LPAREN() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.LPAREN.id, 0)
+		fun RPAREN() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.RPAREN.id, 0)
+		fun findLogic_value() : Logic_valueContext? = getRuleContext(solver.getType("Logic_valueContext"),0)
+		fun findExpression() : ExpressionContext? = getRuleContext(solver.getType("ExpressionContext"),0)
+		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){ ; }
+		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
+			this.indent = indent;
+		}
+	}
+
+	fun  while_expression(indent : Int) : While_expressionContext {
+		var _localctx : While_expressionContext = While_expressionContext(context, state, indent)
+		enterRule(_localctx, 6, Rules.RULE_while_expression.id)
+		try {
+			enterOuterAlt(_localctx, 1)
+			if (true){
+			this.state = 58
+			match(WHILE) as Token
+			this.state = 59
+			(_localctx as While_expressionContext).l = logic_value()
+			this.state = 60
+			match(LPAREN) as Token
+			this.state = 61
+			(_localctx as While_expressionContext).ex = expression(indent+1)
+			this.state = 62
+			match(RPAREN) as Token
+			_localctx.value = "${"\t".repeat(_localctx.indent)}while (${(_localctx as While_expressionContext).l.value}) {\n${(_localctx as While_expressionContext).ex.value}${"\t".repeat(_localctx.indent)}}"
 			}
 		}
 		catch (re: RecognitionException) {
@@ -456,31 +502,25 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterIf_expression(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitIf_expression(this)
-		}
 	}
 
 	fun  if_expression(indent : Int) : If_expressionContext {
 		var _localctx : If_expressionContext = If_expressionContext(context, state, indent)
-		enterRule(_localctx, 6, Rules.RULE_if_expression.id)
+		enterRule(_localctx, 8, Rules.RULE_if_expression.id)
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 53
+			this.state = 65
 			match(IF) as Token
-			this.state = 54
+			this.state = 66
 			(_localctx as If_expressionContext).l = logic_value()
-			this.state = 55
+			this.state = 67
 			match(LPAREN) as Token
-			this.state = 56
+			this.state = 68
 			(_localctx as If_expressionContext).ex = expression(indent+1)
-			this.state = 57
+			this.state = 69
 			match(RPAREN) as Token
-			this.state = 58
+			this.state = 70
 			(_localctx as If_expressionContext).el = else_expression(indent)
 			_localctx.value = "${"\t".repeat(_localctx.indent)}if (${(_localctx as If_expressionContext).l.value}) {\n${(_localctx as If_expressionContext).ex.value}${"\t".repeat(_localctx.indent)}} ${(_localctx as If_expressionContext).el.value}"
 			}
@@ -510,33 +550,27 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterElse_expression(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitElse_expression(this)
-		}
 	}
 
 	fun  else_expression(indent : Int) : Else_expressionContext {
 		var _localctx : Else_expressionContext = Else_expressionContext(context, state, indent)
-		enterRule(_localctx, 8, Rules.RULE_else_expression.id)
+		enterRule(_localctx, 10, Rules.RULE_else_expression.id)
 		try {
-			this.state = 67
+			this.state = 79
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			LPAREN  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 61
+			this.state = 73
 			match(LPAREN) as Token
-			this.state = 62
+			this.state = 74
 			(_localctx as Else_expressionContext).ex = expression(indent+1)
-			this.state = 63
+			this.state = 75
 			match(RPAREN) as Token
 			_localctx.value = "else {\n${(_localctx as Else_expressionContext).ex.value}${"\t".repeat(_localctx.indent)}}"
 			}}
-			EOF , IF , RPAREN , PRINT , DEFINE , REDEF  ->  /*LL1AltBlock*/{
+			EOF , IF , WHILE , RPAREN , PRINT , DEFINE , REDEF  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
 			_localctx.value = ""
@@ -568,23 +602,17 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterPrint(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitPrint(this)
-		}
 	}
 
 	fun  print(indent : Int) : PrintContext {
 		var _localctx : PrintContext = PrintContext(context, state, indent)
-		enterRule(_localctx, 10, Rules.RULE_print.id)
+		enterRule(_localctx, 12, Rules.RULE_print.id)
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 69
+			this.state = 81
 			match(PRINT) as Token
-			this.state = 70
+			this.state = 82
 			(_localctx as PrintContext).variable = variable()
 			_localctx.value = "${"\t".repeat(_localctx.indent)}println(${(_localctx as PrintContext).variable.value})"
 			}
@@ -616,40 +644,34 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		constructor(parent: ParserRuleContext?, invokingState: Int, indent : Int) : super(parent, invokingState){
 			this.indent = indent;
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterDefine(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitDefine(this)
-		}
 	}
 
 	fun  define(indent : Int) : DefineContext {
 		var _localctx : DefineContext = DefineContext(context, state, indent)
-		enterRule(_localctx, 12, Rules.RULE_define.id)
+		enterRule(_localctx, 14, Rules.RULE_define.id)
 		try {
-			this.state = 83
+			this.state = 95
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			DEFINE  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 73
+			this.state = 85
 			match(DEFINE) as Token
-			this.state = 74
+			this.state = 86
 			(_localctx as DefineContext).VARS = match(VARS) as Token
-			this.state = 75
+			this.state = 87
 			(_localctx as DefineContext).variable = variable()
 			_localctx.value = "${"\t".repeat(_localctx.indent)}var ${((_localctx as DefineContext).VARS?.text)} = ${(_localctx as DefineContext).variable.value}"
 			}}
 			REDEF  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 78
+			this.state = 90
 			match(REDEF) as Token
-			this.state = 79
+			this.state = 91
 			(_localctx as DefineContext).VARS = match(VARS) as Token
-			this.state = 80
+			this.state = 92
 			(_localctx as DefineContext).variable = variable()
 			_localctx.value = "${"\t".repeat(_localctx.indent)}${((_localctx as DefineContext).VARS?.text)} = ${(_localctx as DefineContext).variable.value}"
 			}}
@@ -680,39 +702,33 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun VARS() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.VARS.id, 0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterVariable(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitVariable(this)
-		}
 	}
 
 	fun  variable() : VariableContext {
 		var _localctx : VariableContext = VariableContext(context, state)
-		enterRule(_localctx, 14, Rules.RULE_variable.id)
+		enterRule(_localctx, 16, Rules.RULE_variable.id)
 		try {
-			this.state = 93
+			this.state = 105
 			errorHandler.sync(this)
 			when ( interpreter!!.adaptivePredict(_input!!,5,context) ) {
 			1 -> {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 85
+			this.state = 97
 			(_localctx as VariableContext).logic_value = logic_value()
 			_localctx.value = (_localctx as VariableContext).logic_value.value
 			}}
 			2 -> {
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 88
+			this.state = 100
 			(_localctx as VariableContext).int_value = int_value()
 			_localctx.value = (_localctx as VariableContext).int_value.value
 			}}
 			3 -> {
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 91
+			this.state = 103
 			(_localctx as VariableContext).VARS = match(VARS) as Token
 			_localctx.value = ((_localctx as VariableContext).VARS?.text)!!
 			}}
@@ -753,70 +769,64 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun findInt_value(i: Int) : Int_valueContext? = getRuleContext(solver.getType("Int_valueContext"),i)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterLogic_value(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitLogic_value(this)
-		}
 	}
 
 	fun  logic_value() : Logic_valueContext {
 		var _localctx : Logic_valueContext = Logic_valueContext(context, state)
-		enterRule(_localctx, 16, Rules.RULE_logic_value.id)
+		enterRule(_localctx, 18, Rules.RULE_logic_value.id)
 		try {
-			this.state = 115
+			this.state = 127
 			errorHandler.sync(this)
 			when ( interpreter!!.adaptivePredict(_input!!,6,context) ) {
 			1 -> {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 95
+			this.state = 107
 			(_localctx as Logic_valueContext).op = logic_operation()
-			this.state = 96
+			this.state = 108
 			(_localctx as Logic_valueContext).lv = logic_value()
-			this.state = 97
+			this.state = 109
 			(_localctx as Logic_valueContext).rv = logic_value()
 			_localctx.value = "(${(_localctx as Logic_valueContext).lv.value} ${(_localctx as Logic_valueContext).op.op} ${(_localctx as Logic_valueContext).rv.value})"
 			}}
 			2 -> {
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 100
+			this.state = 112
 			match(NOT) as Token
-			this.state = 101
+			this.state = 113
 			(_localctx as Logic_valueContext).lv = logic_value()
 			_localctx.value = "!(${(_localctx as Logic_valueContext).lv.value})"
 			}}
 			3 -> {
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 104
+			this.state = 116
 			(_localctx as Logic_valueContext).VARS = match(VARS) as Token
 			_localctx.value = ((_localctx as Logic_valueContext).VARS?.text)!!
 			}}
 			4 -> {
 			enterOuterAlt(_localctx, 4)
 			if (true){
-			this.state = 106
+			this.state = 118
 			match(TRUE) as Token
 			_localctx.value = "true"
 			}}
 			5 -> {
 			enterOuterAlt(_localctx, 5)
 			if (true){
-			this.state = 108
+			this.state = 120
 			match(FALSE) as Token
 			_localctx.value = "false"
 			}}
 			6 -> {
 			enterOuterAlt(_localctx, 6)
 			if (true){
-			this.state = 110
+			this.state = 122
 			(_localctx as Logic_valueContext).c_op = compare_op()
-			this.state = 111
+			this.state = 123
 			(_localctx as Logic_valueContext).c_lv = int_value()
-			this.state = 112
+			this.state = 124
 			(_localctx as Logic_valueContext).c_rv = int_value()
 			_localctx.value = "(${(_localctx as Logic_valueContext).c_lv.value} ${(_localctx as Logic_valueContext).c_op.op} ${(_localctx as Logic_valueContext).c_rv.value})"
 			}}
@@ -850,43 +860,37 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun NUMBER() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.NUMBER.id, 0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterInt_value(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitInt_value(this)
-		}
 	}
 
 	fun  int_value() : Int_valueContext {
 		var _localctx : Int_valueContext = Int_valueContext(context, state)
-		enterRule(_localctx, 18, Rules.RULE_int_value.id)
+		enterRule(_localctx, 20, Rules.RULE_int_value.id)
 		try {
-			this.state = 126
+			this.state = 138
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			PLUS , MINUS , MULL , DIV  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 117
+			this.state = 129
 			(_localctx as Int_valueContext).op = int_operations()
-			this.state = 118
+			this.state = 130
 			(_localctx as Int_valueContext).lv = int_value()
-			this.state = 119
+			this.state = 131
 			(_localctx as Int_valueContext).rv = int_value()
 			_localctx.value = "(${(_localctx as Int_valueContext).lv.value} ${(_localctx as Int_valueContext).op.op} ${(_localctx as Int_valueContext).rv.value})"
 			}}
 			VARS  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 122
+			this.state = 134
 			(_localctx as Int_valueContext).VARS = match(VARS) as Token
 			_localctx.value = ((_localctx as Int_valueContext).VARS?.text)!!
 			}}
 			NUMBER  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 124
+			this.state = 136
 			(_localctx as Int_valueContext).NUMBER = match(NUMBER) as Token
 			_localctx.value = ((_localctx as Int_valueContext).NUMBER?.text)!!
 			}}
@@ -911,58 +915,44 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		var op : String by Delegates.notNull()
 		fun OR() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.OR.id, 0)
 		fun AND() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.AND.id, 0)
-		fun XOR() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.XOR.id, 0)
 		fun EQUAL() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.EQUAL.id, 0)
 		fun NOT_EQUAL() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.NOT_EQUAL.id, 0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
-		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterLogic_operation(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitLogic_operation(this)
 		}
 	}
 
 	fun  logic_operation() : Logic_operationContext {
 		var _localctx : Logic_operationContext = Logic_operationContext(context, state)
-		enterRule(_localctx, 20, Rules.RULE_logic_operation.id)
+		enterRule(_localctx, 22, Rules.RULE_logic_operation.id)
 		try {
-			this.state = 138
+			this.state = 148
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			OR  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 128
+			this.state = 140
 			match(OR) as Token
 			_localctx.op = " || "
 			}}
 			AND  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 130
+			this.state = 142
 			match(AND) as Token
 			_localctx.op = " && "
 			}}
-			XOR  ->  /*LL1AltBlock*/{
+			EQUAL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 132
-			match(XOR) as Token
-			_localctx.op = " ^ "
-			}}
-			EQUAL  ->  /*LL1AltBlock*/{
-			enterOuterAlt(_localctx, 4)
-			if (true){
-			this.state = 134
+			this.state = 144
 			match(EQUAL) as Token
 			_localctx.op = " == "
 			}}
 			NOT_EQUAL  ->  /*LL1AltBlock*/{
-			enterOuterAlt(_localctx, 5)
+			enterOuterAlt(_localctx, 4)
 			if (true){
-			this.state = 136
+			this.state = 146
 			match(NOT_EQUAL) as Token
 			_localctx.op = " != "
 			}}
@@ -991,46 +981,40 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun DIV() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.DIV.id, 0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterInt_operations(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitInt_operations(this)
-		}
 	}
 
 	fun  int_operations() : Int_operationsContext {
 		var _localctx : Int_operationsContext = Int_operationsContext(context, state)
-		enterRule(_localctx, 22, Rules.RULE_int_operations.id)
+		enterRule(_localctx, 24, Rules.RULE_int_operations.id)
 		try {
-			this.state = 148
+			this.state = 158
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			PLUS  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 140
+			this.state = 150
 			match(PLUS) as Token
 			_localctx.op = " + "
 			}}
 			MINUS  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 142
+			this.state = 152
 			match(MINUS) as Token
 			_localctx.op = " - "
 			}}
 			MULL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 144
+			this.state = 154
 			match(MULL) as Token
 			_localctx.op = " * "
 			}}
 			DIV  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 4)
 			if (true){
-			this.state = 146
+			this.state = 156
 			match(DIV) as Token
 			_localctx.op = " / "
 			}}
@@ -1061,60 +1045,54 @@ class PrefixGrammarParser(input: TokenStream) : Parser(input) {
 		fun HIGHER_EQUAL() : TerminalNode? = getToken(PrefixGrammarParser.Tokens.HIGHER_EQUAL.id, 0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
-		override fun enterRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).enterCompare_op(this)
-		}
-		override fun exitRule(listener: ParseTreeListener) {
-			if ( listener is PrefixGrammarListener ) (listener as PrefixGrammarListener).exitCompare_op(this)
-		}
 	}
 
 	fun  compare_op() : Compare_opContext {
 		var _localctx : Compare_opContext = Compare_opContext(context, state)
-		enterRule(_localctx, 24, Rules.RULE_compare_op.id)
+		enterRule(_localctx, 26, Rules.RULE_compare_op.id)
 		try {
-			this.state = 162
+			this.state = 172
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			EQUAL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 150
+			this.state = 160
 			match(EQUAL) as Token
 			_localctx.op = " == "
 			}}
 			NOT_EQUAL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 152
+			this.state = 162
 			match(NOT_EQUAL) as Token
 			_localctx.op = " != "
 			}}
 			LOWER  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 154
+			this.state = 164
 			match(LOWER) as Token
 			_localctx.op = " < "
 			}}
 			LOWER_EQUAL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 4)
 			if (true){
-			this.state = 156
+			this.state = 166
 			match(LOWER_EQUAL) as Token
 			_localctx.op = " <= "
 			}}
 			HIGHER  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 5)
 			if (true){
-			this.state = 158
+			this.state = 168
 			match(HIGHER) as Token
 			_localctx.op = " > "
 			}}
 			HIGHER_EQUAL  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 6)
 			if (true){
-			this.state = 160
+			this.state = 170
 			match(HIGHER_EQUAL) as Token
 			_localctx.op = " >= "
 			}}
