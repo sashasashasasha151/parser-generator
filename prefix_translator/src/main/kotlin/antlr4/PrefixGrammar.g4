@@ -2,6 +2,7 @@ grammar PrefixGrammar;
 
 start returns [String value]
     :   expression[1]                                           {$value = "fun main(args: Array<String>) {\n${$expression.value}}"}
+    |                                                           {$value = "fun main(args: Array<String>) {\n}"}
     ;
 
 
@@ -39,6 +40,7 @@ print[Int indent] returns [String value]
 
 define[Int indent] returns [String value]
     :   DEFINE VARS variable                                    {$value = "${"\t".repeat($indent)}var ${$VARS.text} = ${$variable.value}"}
+    |   REDEF VARS variable                                     {$value = "${"\t".repeat($indent)}${$VARS.text} = ${$variable.value}"}
     ;
 
 
@@ -101,6 +103,7 @@ RPAREN                          :   ')';
 PRINT                           :   'print';
 
 DEFINE                          :   'def';
+REDEF                           :   '=';
 
 VARS                            :   ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*;
 NUMBER                          :   ('-'? ('1'..'9') ('0'..'9')*) | '0';

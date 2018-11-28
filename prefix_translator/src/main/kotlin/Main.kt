@@ -1,10 +1,43 @@
 import org.antlr.v4.kotlinruntime.CharStreams
 import org.antlr.v4.kotlinruntime.CommonTokenStream
+import java.io.File
+import java.io.IOException
+import java.util.*
 
 fun main(args: Array<String>) {
-    val streams = CharStreams.fromString("def a 2 def a 4 def a + b 6 if < 2 3 (print 3) if >= 4 - 7 2 (print + 3 4)")
+    val streams = CharStreams.fromString("def a 2 def b 4 def c + b 6 if < a b (print c = b 55) if true (print > b c)")
     val lexer = PrefixGrammarLexer(streams)
+
+//    lexer.removeErrorListeners()
+//    lexer.addErrorListener(ThrowingErrorListener.INSTANCE)
+
     val tokens = CommonTokenStream(lexer)
     val parser = PrefixGrammarParser(tokens)
-    System.out.println(parser.start().value)
+
+//    parser.removeErrorListeners()
+//    parser.addErrorListener(ThrowingErrorListener.INSTANCE)
+
+    val str = parser.start().value
+
+    System.out.println(str)
+    val fileName = "src/test/kotlin/ktProgs/Hello.kt"
+
+    var file = File(fileName)
+
+    // create a new file
+    file.writeText(str)
+
+    val rt = Runtime.getRuntime()
+    try {
+        var pr = rt.exec("kotlinc /home/sasha/Code/MT/prefix_translator/src/test/kotlin/ktProgs/Hello.kt -include-runtime -d /home/sasha/Code/MT/prefix_translator/src/test/kotlin/ktProgs/hello.jar")
+        pr.waitFor()
+        print(pr.exitValue())
+        print(pr.errorStream.bufferedReader().use { it.readText() })
+
+        pr = rt.exec("java -jar /home/sasha/Code/MT/prefix_translator/src/test/kotlin/ktProgs/hello.jar")
+        pr.waitFor()
+        print(pr.inputStream.bufferedReader().use { it.readText() } == "10${10.toChar()}true${10.toChar()}")
+    } catch (e1: IOException) {
+        e1.printStackTrace();
+    }
 }
