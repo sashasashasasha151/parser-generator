@@ -25,6 +25,8 @@ class TreeVisualizer {
             node.add(if (tree.nodeName == "eps") Color.GRAY else Color.RED)
         }
 
+        val sortedMap = sortedSetOf("we")
+
         return node
     }
 
