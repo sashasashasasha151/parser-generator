@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3124bf2d-a562-47ca-8cea-55f4360852e3" name="Default Changelist" comment="parser done">
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/main/kotlin/GenerateGrammarParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/main/kotlin/LexerGenerator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/main/kotlin/ParserGenerator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/main/kotlin/antlr4/Grammar.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/antlr_test_grammars/GrammarWithAttrs.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/antlr_test_grammars/SimpleGrammar.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/test_grammars/GrammarWithAttrs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/test_grammars/SimpleGrammar.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../parser-generator/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarParser.kt" afterDir="false" />
+    <list default="true" id="e4676f01-804d-4a63-abf7-5504962bfa73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GenerateGrammarParser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LexerGenerator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ParserGenerator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarLexer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarParser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/GrammarWithAttrs.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/SimpleGrammar.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/test_grammars/GrammarWithAttrs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/test_grammars/SimpleGrammar.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/antlr4/PrefixGrammarParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../prefix_translator/src/main/kotlin/antlr4/PrefixGrammarParser.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recursive-parser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../recursive-parser/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,190 +53,172 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/prefix_translator$ExampleKt.ic" NAME="ExampleKt Coverage Results" MODIFIED="1543248647119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="prefix_translator" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1405962063">
+    <session id="-1488211945">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="MF" value="3" />
-          <entry key="bc" value="1" />
-          <entry key="class" value="31" />
-          <entry key="g4" value="5" />
-          <entry key="gradle" value="11" />
-          <entry key="gradlew" value="1" />
-          <entry key="interp" value="5" />
-          <entry key="java" value="30" />
-          <entry key="kotlin_metadata" value="3" />
-          <entry key="kt" value="145" />
-          <entry key="properties" value="2" />
-          <entry key="stg" value="3" />
-          <entry key="tokens" value="3" />
+          <entry key="bat" value="1" />
+          <entry key="class" value="2" />
+          <entry key="g4" value="7" />
+          <entry key="gradle" value="2" />
+          <entry key="kt" value="24" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ANTLR v4 grammar file" value="5" />
-          <entry key="CLASS" value="31" />
-          <entry key="Groovy" value="11" />
-          <entry key="JAVA" value="30" />
-          <entry key="Kotlin" value="145" />
-          <entry key="Lightning" value="3" />
-          <entry key="Manifest" value="3" />
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Properties" value="2" />
-          <entry key="UNKNOWN" value="1" />
-          <entry key="kotlin_builtins" value="3" />
+          <entry key="ANTLR v4 grammar file" value="7" />
+          <entry key="CLASS" value="2" />
+          <entry key="Groovy" value="2" />
+          <entry key="Kotlin" value="24" />
+          <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="g4" value="1267" />
-          <entry key="gradle" value="101" />
-          <entry key="kt" value="4761" />
-          <entry key="txt" value="19" />
+          <entry key="g4" value="1654" />
+          <entry key="gradle" value="2" />
+          <entry key="kt" value="2073" />
+          <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ANTLR v4 grammar file" value="1267" />
-          <entry key="Groovy" value="101" />
-          <entry key="Kotlin" value="4761" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="ANTLR v4 grammar file" value="1654" />
+          <entry key="Groovy" value="2" />
+          <entry key="Kotlin" value="2073" />
+          <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="75" column="15" selection-start-line="75" selection-end-line="75" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/Test.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#277#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.tokens">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarParser.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="721" column="98" selection-start-line="721" selection-start-column="98" selection-end-line="721" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidLogicValue.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello.kt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#163#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/BuildParser.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidCompare.kt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.43579766">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/ParserGenerator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#0#97#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="61" selection-start-line="61" selection-end-line="79" selection-end-column="72" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/SimpleGrammar.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/LexerGenerator.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#53#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/Main.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/SimpleGrammar.g4">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="5" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="194">
+                  <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/GrammarWithAttrs.txt">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/SimpleGrammarLexer.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="302">
+                  <caret line="122" column="48" lean-forward="true" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+                  <folding>
+                    <element signature="e#1#117#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/GrammarNameLexer.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="47">
+                  <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -242,28 +230,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>val</find>
-      <find>parser</find>
-      <find>lateinit va</find>
-      <find>infun</find>
-      <find>AttributeDecl</find>
-      <find>new</find>
-      <find>as</find>
-      <find>lateinit var indent : Int</find>
-      <find>notifyListeners</find>
-      <find>allTokens</find>
-      <find>define</find>
-      <find>mapn</find>
-      <find>start</find>
-      <find>expression</find>
-      <find>expression(indent+</find>
-      <find>int_value</find>
-      <find>logic_operation</find>
-      <find>text?</find>
-      <find>.text</find>
+      <find>words</find>
+      <find>..</find>
     </findStrings>
     <replaceStrings>
-      <replace>var indent : Int = 0</replace>
+      <replace>until</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -272,7 +243,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8" />
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -285,14 +256,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="prefix_translator" />
+              <option name="name" value="parser-generator" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="prefix_translator" />
+                <option name="name" value="parser-generator" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -326,7 +297,7 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'prefix_translator'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'parser-generator'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
@@ -345,7 +316,7 @@
                 <option name="name" value="inspectClassesForKotlinIC" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'prefix_translator'." />
+                <option name="description" value="Displays the sub-projects of root project 'parser-generator'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
@@ -355,12 +326,12 @@
                 <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'prefix_translator'. [incubating]" />
+                <option name="description" value="Displays the dependent components of components in root project 'parser-generator'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'prefix_translator'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'parser-generator'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -404,7 +375,7 @@
                 <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'prefix_translator'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'parser-generator'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
@@ -414,7 +385,7 @@
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'prefix_translator' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'parser-generator' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -444,7 +415,7 @@
                 <option name="name" value="compileTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'prefix_translator'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'parser-generator'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -469,7 +440,7 @@
                 <option name="name" value="compileTestJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'prefix_translator'." />
+                <option name="description" value="Displays all dependencies declared in root project 'parser-generator'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -509,7 +480,7 @@
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'prefix_translator'." />
+                <option name="description" value="Displays the properties of root project 'parser-generator'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -800,12 +771,12 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7716849922000" />
+        <entry key="$PROJECT_DIR$" value="7722437465000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2026779240" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3650535818" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="555816057" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="1449692450" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1081,7 +1052,7 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="prefix_translator" />
+              <option name="name" value="parser-generator" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-comparison" />
@@ -1249,30 +1220,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/Example.kt" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Example.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/RandomValidSymbol.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarBaseListener.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/ThrowingErrorListener.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/RandomValidSymbols.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ThrowingErrorListener.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ktClasses/Hello.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/BuildParser.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/Value.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/Temp.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello1.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ValidPrefixProgram.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/Test.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/RandomSymbols.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ValidNumValue.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ValidLogicValue.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ValidCompare.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarParser.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/GGGrammar.g4" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/BuildGrammarParser.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/GGrammar.g4" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarParser.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/SimpleGrammar.g4" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Temp.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarLexer.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ParserGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/GrammarNameLexer.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/test_grammars/SimpleGrammar.txt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/SimpleGrammar.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/LexerGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/SimpleGrammarLexer.kt" />
       </list>
     </option>
   </component>
@@ -1293,153 +1258,113 @@
     <option name="width" value="960" />
     <option name="height" value="1046" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Code style issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Java interop issuesKotlin</id>
-          </State>
-          <State>
-            <id>Kotlin</id>
-          </State>
-        </expanded-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="antlr4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prefix_translator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="antlr_test_grammars" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.strumenta.antlr-kotlin:antlr-kotlin-target:ddb978b881" type="70bed36:NamedLibraryElementNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="test_grammars" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.strumenta.antlr-kotlin:antlr-kotlin-target:ddb978b881" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr-kotlin-target-ddb978b881.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="test_grammars" type="462c0819:PsiDirectoryNode" />
+              <item name="gen_simple" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.strumenta.antlr-kotlin:antlr-kotlin-target:ddb978b881" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr-kotlin-target-ddb978b881.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="v4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.strumenta.antlr-kotlin:antlr-kotlin-target:ddb978b881" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr-kotlin-target-ddb978b881.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="v4" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prefix_translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.strumenta.antlr-kotlin:antlr-kotlin-target:ddb978b881" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr-kotlin-target-ddb978b881.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="v4" type="462c0819:PsiDirectoryNode" />
-              <item name="Kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="parser-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parser-generator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="test_grammars" type="462c0819:PsiDirectoryNode" />
+              <item name="gen_simple" type="462c0819:PsiDirectoryNode" />
+              <item name="gen_simple_test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4::/auto-gen" value="false" />
-    <property name="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4::/gen-listener" value="false" />
-    <property name="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4::/gen-visitor" value="false" />
-    <property name="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4::/language" value="Kotlin" />
-    <property name="$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4::/output-dir" value="$PROJECT_DIR$/src/main/kotlin/antlr4" />
-    <property name="SearchEverywhereHistoryKey" value="AttributeDecl&#9;PSI&#9;JAVA://com.sun.org.apache.xerces.internal.xni.XMLDTDHandler#attributeDecl" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544624217127" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544624217162" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recursive-parser" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.55402297" />
-    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/kotlin/antlr4" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/kotlin" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/antlr4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1454,55 +1379,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.HelloKt">
-    <configuration name="Tester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="prefix_translator_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <option name="METHOD_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tester.parserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="prefix_translator_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <option name="METHOD_NAME" value="parserTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuildParserKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="prefix_translator_main" />
+  <component name="RunManager" selected="Kotlin.test_grammars.gen_simple.gen_simple_test.GenSimpleTestKt">
+    <configuration name="GenerateGrammarParserKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="parser-generator_main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="BuildParserKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelloKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="prefix_translator_test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="HelloKt" />
+      <option name="MAIN_CLASS_NAME" value="GenerateGrammarParserKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="prefix_translator_main" />
+      <module name="parser-generator_test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1514,20 +1406,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test_grammars.gen_simple.gen_simple_test.GenSimpleTestKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="parser-generator_test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="test_grammars.gen_simple.gen_simple_test.GenSimpleTestKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.Tester" />
-      <item itemvalue="JUnit.Tester.parserTest" />
-      <item itemvalue="Kotlin.BuildParserKt" />
+      <item itemvalue="Kotlin.GenerateGrammarParserKt" />
       <item itemvalue="Kotlin.MainKt" />
-      <item itemvalue="Kotlin.HelloKt" />
+      <item itemvalue="Kotlin.test_grammars.gen_simple.gen_simple_test.GenSimpleTestKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.HelloKt" />
+        <item itemvalue="Kotlin.test_grammars.gen_simple.gen_simple_test.GenSimpleTestKt" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Kotlin.BuildParserKt" />
-        <item itemvalue="JUnit.Tester" />
-        <item itemvalue="JUnit.Tester.parserTest" />
+        <item itemvalue="Kotlin.GenerateGrammarParserKt" />
       </list>
     </recent_temporary>
   </component>
@@ -1536,75 +1437,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3124bf2d-a562-47ca-8cea-55f4360852e3" name="Default Changelist" comment="" />
-      <created>1543237590948</created>
+      <changelist id="e4676f01-804d-4a63-abf7-5504962bfa73" name="Default Changelist" comment="" />
+      <created>1544487385287</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1543237590948</updated>
-      <workItem from="1543237597361" duration="4455000" />
-      <workItem from="1543242107112" duration="45000" />
-      <workItem from="1543242194861" duration="14137000" />
-      <workItem from="1543260959043" duration="864000" />
-      <workItem from="1543261859102" duration="506000" />
-      <workItem from="1543262405504" duration="11784000" />
-      <workItem from="1543316607522" duration="4921000" />
-      <workItem from="1543329315201" duration="28774000" />
-      <workItem from="1543377252591" duration="16162000" />
-      <workItem from="1544449392442" duration="26000" />
-      <workItem from="1544487075999" duration="4620000" />
-      <workItem from="1544494419122" duration="9959000" />
+      <updated>1544487385287</updated>
+      <workItem from="1544487390879" duration="6842000" />
+      <workItem from="1544494419756" duration="27878000" />
     </task>
-    <task id="LOCAL-00001" summary="parser done">
-      <created>1543284787632</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1543284787632</updated>
-    </task>
-    <task id="LOCAL-00002" summary="parser done">
-      <created>1543369694604</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1543369694604</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Tester_parserTest - 2018.11.28 at 14h 42m 51s.xml">
-      <configuration name="Tester.parserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_parserTest - 2018.11.28 at 14h 44m 59s.xml">
-      <configuration name="Tester.parserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_parserTest - 2018.11.28 at 14h 46m 54s.xml">
-      <configuration name="Tester.parserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.11.28 at 14h 49m 28s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_parserTest - 2018.11.28 at 15h 05m 07s.xml">
-      <configuration name="Tester.parserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester_parserTest - 2018.11.28 at 15h 06m 27s.xml">
-      <configuration name="Tester.parserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.11.28 at 15h 08m 25s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.11.28 at 15h 10m 42s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.11.28 at 15h 14m 42s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tester - 2018.11.28 at 15h 25m 53s.xml">
-      <configuration name="Tester" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96253000" />
+    <option name="totallyTimeSpent" value="34720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1617,47 +1461,82 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1046" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498366" visible="true" weight="0.28175026" />
-      <window_info id="Structure" order="1" sideWeight="0.501634" side_tool="true" weight="0.26627535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17716116" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3881579" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
-      <window_info anchor="bottom" id="Log Viewer" order="7" weight="0.32894737" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.33004385" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" weight="0.32785088" />
-      <window_info anchor="bottom" id="Tool Output" order="10" visible="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053364" side_tool="true" weight="0.32785088" />
-      <window_info anchor="bottom" id="Anonymous Apex" order="12" weight="0.32894737" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="15" weight="0.32894737" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.23903508" />
-      <window_info anchor="bottom" id="SOQL Query" order="17" weight="0.32894737" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32977587" />
-      <window_info anchor="right" id="Palette&#9;" order="1" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32977587" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="9" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="11" weight="0.2497332" />
-      <window_info anchor="right" x="0" y="0" width="430" height="846" id="Documentation" order="12" side_tool="true" weight="0.32977587" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32894737" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3991228" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32894737" />
+      <window_info anchor="bottom" id="Log Viewer" order="8" />
+      <window_info anchor="bottom" id="Build" order="9" weight="0.23464912" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32894737" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.3881579" />
+      <window_info anchor="bottom" id="Tool Output" order="12" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32894737" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="16" show_stripe_button="false" />
+      <window_info anchor="bottom" id="SOQL Query" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3632385" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32894737" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3991228" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Log Viewer" order="8" />
+      <window_info anchor="bottom" id="Build" order="9" weight="0.23464912" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32894737" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.3881579" />
+      <window_info anchor="bottom" id="Tool Output" order="12" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32894737" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="16" show_stripe_button="false" />
+      <window_info anchor="bottom" id="SOQL Query" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1665,345 +1544,187 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="parser done" />
-    <option name="LAST_COMMIT_MESSAGE" value="parser done" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.7.1/132efd77f9ca1683d2b104071879a04cfc64d2b4/antlr4-4.7.1-sources.jar!/org/antlr/v4/Tool.java</url>
-          <line>412</line>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt</url>
+          <line>5</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.7.1/132efd77f9ca1683d2b104071879a04cfc64d2b4/antlr4-4.7.1-sources.jar!/org/antlr/v4/codegen/CodeGenPipeline.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
     </breakpoint-manager>
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.interp">
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0/8bee30ce9d075088b3d590488a270e2c3ea39b3a/kotlin-stdlib-common-1.3.0-sources.jar!/kotlin/random/Random.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/CommonTokenStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.interp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/atn/LexerATNSimulator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0/98515ba3feb571f93b923e61f643bdaed59d14ac/kotlin-stdlib-1.3.0-sources.jar!/kotlin/jvm/internal/Intrinsics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="235" column="43" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/com/strumenta/kotlinmultiplatform/TypeKt.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-common/ddb978b881/82a93704d36db4b3cda206d6329ba4ccd6e152e9/antlr-kotlin-runtime-common-ddb978b881.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-common/ddb978b881/82a93704d36db4b3cda206d6329ba4ccd6e152e9/antlr-kotlin-runtime-common-ddb978b881.jar!/org/antlr/v4/kotlinruntime/Lexer.kotlin_metadata">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/com/strumenta/kotlinmultiplatform/WeakHashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/Token.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/atn/PredictionContextCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/Lexer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/Recognizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarListener.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarBaseListener.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/Parser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.7.1/1e68e18aa14f3229b95820d354a594846134af38/antlr4-runtime-4.7.1-sources.jar!/org/antlr/v4/runtime/BaseErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0/8bee30ce9d075088b3d590488a270e2c3ea39b3a/kotlin-stdlib-common-1.3.0-sources.jar!/kotlin/properties/Delegates.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="47" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/ANTLRErrorListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/BaseErrorListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/misc/ParseCancellationException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.kotlintest/kotlintest-assertions/3.1.10/9fe422476336e60a8a9dcf0535589a7c7e4acf61/kotlintest-assertions-3.1.10-sources.jar!/io/kotlintest/ExceptionHandlers.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hello.kt" />
-    <entry file="jar:///opt/jdk1.8.0_191/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello5.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello3.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1474" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/Temp.kt" />
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello2.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/Value.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/RandomSymbols.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidNumValue.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidPrefixProgram.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ThrowingErrorListener.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-target/ddb978b881/c89ef26549b5803fb487bfaeae55089909077aff/antlr-kotlin-target-ddb978b881.jar!/org/antlr/v4/tool/templates/codegen/Kotlin/Kotlin.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="406" column="20" selection-start-line="406" selection-start-column="20" selection-end-line="406" selection-end-column="20" />
+        <state relative-caret-position="34">
+          <caret line="2" column="145" selection-start-line="2" selection-start-column="145" selection-end-line="2" selection-end-column="145" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        <state relative-caret-position="99">
+          <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="60" column="16" selection-end-line="74" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/GGrammarLexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/GGGrammar.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/GGrammarParser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/GrammarWithAttrs.g4">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.strumenta.antlr-kotlin/antlr-kotlin-runtime-jvm/ddb978b881/c0ed4e5a544e6dcef2376a6a4303aaf79072a238/antlr-kotlin-runtime-jvm-ddb978b881.jar!/org/antlr/v4/kotlinruntime/ParserRuleContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/antlr_test_grammars/SimpleGrammar.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarLexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/GrammarParser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="741" column="21" selection-start-line="741" selection-start-column="21" selection-end-line="741" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/uhbuhb.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-end-line="2" selection-end-column="145" />
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ktProgs/Hello.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/SimpleGrammar.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding>
-            <element signature="e#0#163#0" expanded="true" />
+            <element signature="e#1#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/BuildParser.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ParserGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidCompare.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammar.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="75" column="15" selection-start-line="75" selection-end-line="75" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarParser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="721" column="98" selection-start-line="721" selection-start-column="98" selection-end-line="721" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ValidLogicValue.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/PrefixGrammarLexer.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/SimpleTestTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/Test.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GenerateGrammarParser.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/LexerGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#277#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/SimpleGrammar.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/GrammarNameLexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/GrammarWithAttrs.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/antlr4/Grammar.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/gen_simple_test/GenSimpleTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/test_grammars/gen_simple/SimpleGrammarLexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="122" column="48" lean-forward="true" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+          <folding>
+            <element signature="e#1#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2011,67 +1732,6 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Kotlin</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>gs-core-1.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>prefix_translator_test|prefix_translator</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
@@ -2079,18 +1739,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Gradle: com.ibm.icu:icu4j:58.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.55402297" />
               </list>
             </option>
           </splitter-proportions>
