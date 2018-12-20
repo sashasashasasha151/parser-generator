@@ -1,6 +1,13 @@
 grammar SimpleGrammar;
 
-start   :   DEF REGEX;
+start [Int indent] returns [String value]
+    :   if_expression (1)
+        print {$value = $if_expression.value}
+        RERER {$value = $if_expression.value}
+    |   print (indent+1)                                           {$value = $print.value}
+    |   define (indent)                                          {$value = $define.value}
+    |   ~  {wefw}
+    ;
 
 COLON                                       :   ':';
 SEMICOLON                                   :   ';';
@@ -13,11 +20,11 @@ NO_RULE                                     :   '~';
 RETURNS                                     :   'returns';
 GRAMMAR                                     :   'grammar';
 
-RULE_NAME                                   :   `('a'..'z') ('a'..'z' | '0'..'9' | '_')*`;
-TOKEN_NAME                                  :   `('A'..'Z') ('A'..'Z' | '0'..'9' | '_')*`;
-TYPE_OR_NAME                                :   `('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*`;
+RULE_NAME                                   :   `[a-z]([A-Z]|[0-9]|_)*`;
+TOKEN_NAME                                  :   `[A-Z]([A-Z]|[0-9]|_)*`;
+TYPE_OR_NAME                                :   `([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]|_)*`;
 
-CODE                                        :   `'{' ~('\r' | '\n')* '}'`;
-TOKEN_DEF                                   :   `'\'' ~('\r' | '\n')* '\''`;
-REGEX                                       :   `'`' ~('\r' | '\n')* '`'`;
-EX_ATTR                                     :   `'(' ~('\r' | '\n')* ')'`;
+CODE                                        :   `\\{[^\n\r]+\\}`;
+TOKEN_DEF                                   :   `'[^\n\r]+'`;
+REGEX                                       :   ``[^\n\r]+``;
+EX_ATTR                                     :   `\\([^\n\r]+\\)`;

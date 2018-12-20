@@ -1,0 +1,11 @@
+grammar RightBranching;
+
+start   :   EF EFEF prev
+        |   EFEF EFEF EEFF pr
+        |   EFEF prev
+        ;
+
+prev    :   EFEF EFEF
+        ;
+
+DEF :   'def';

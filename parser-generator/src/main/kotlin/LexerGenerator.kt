@@ -1,20 +1,25 @@
 import GrammarParser.*
 import java.io.File
 import java.lang.StringBuilder
+import java.text.ParseException
 
-class LexerGenerator(val grammarName: String, val ttokenssContext: TtokenssContext?, val toFolderPath: String) {
+class LexerGenerator(
+    val grammarName: String,
+    val ttokenssContext: TtokenssContext?,
+    val toFolderPath: String,
+    val packageName: String
+) {
     val tokenNames = mutableListOf<String>()
     val tokenValue = mutableListOf<String?>()
 
     fun generate() {
         if (ttokenssContext == null) {
-            return
+            throw ParseException("No terminal tokens in your grammar!", -1)
         }
 
         getTokensFromTree()
 
         val lexerString = buildLexer()
-
 
         val fileName = "${toFolderPath}${grammarName}Lexer.kt"
         val file = File(fileName)
@@ -24,15 +29,17 @@ class LexerGenerator(val grammarName: String, val ttokenssContext: TtokenssConte
     private fun getTokensFromTree() {
         for (token in ttokenssContext!!.findToken()) {
             tokenNames.add(token.TOKEN_NAME()!!.text)
-
             tokenValue.add(token.findToken_expression()!!.text)
         }
     }
 
     private fun buildLexer(): String {
         val TokensAndRegexs = buildTokensAndRegexs()
-        val TokensInWhen = buildTokensInWhen()
+        val TokensInWhenPart = buildTokensInWhenPart()
+
         return """
+package $packageName
+
 import java.io.IOException
 import java.io.InputStream
 import java.lang.StringBuilder
@@ -45,6 +52,9 @@ class ${grammarName}Lexer(private val input: InputStream) {
 
     private var curPos = 0
 
+    lateinit var curTokenText: String
+        private set
+
     lateinit var curToken: Token
         private set
 
@@ -53,32 +63,48 @@ class ${grammarName}Lexer(private val input: InputStream) {
     }
 
     fun nextToken() {
+        while (curChar != -1 && curChar.toChar().isWhitespace()) {
+            nextChar()
+        }
+
         if (curChar == -1) {
             curToken = Token.END
             return
         }
 
-        while (curChar.toChar().isWhitespace()) {
+        val sb = StringBuilder()
+
+        while (curChar != -1 && !curChar.toChar().isWhitespace()) {
+            sb.append(curChar.toChar())
             nextChar()
         }
 
-        val sb = StringBuilder(curChar.toChar().toString())
-
         var id = idToken(sb.toString())
+
         while (true) {
             if (curChar == -1 || id != -1) {
                 break
             }
-            sb.append(nextChar())
+
+            while (curChar != -1 && curChar.toChar().isWhitespace()) {
+                sb.append(curChar.toChar())
+                nextChar()
+            }
+
+            while (curChar != -1 && !curChar.toChar().isWhitespace()) {
+                sb.append(curChar.toChar())
+                nextChar()
+            }
+
             id = idToken(sb.toString())
         }
 
         curToken = when (id) {
-            $TokensInWhen
+            $TokensInWhenPart
             else -> throw ParseException("Illegal character '${'$'}{curChar.toChar()}'", curPos)
         }
 
-        nextChar()
+        curTokenText = sb.toString()
     }
 
     fun idToken(s: String): Int {
@@ -89,7 +115,7 @@ class ${grammarName}Lexer(private val input: InputStream) {
                 }
             } else {
                 for (p in regexDefs) {
-                    if (p.value.toRegex().matches(s)) {
+                    if (p.value.matches(s)) {
                         return p.key
                     }
                 }
@@ -134,15 +160,15 @@ class ${grammarName}Lexer(private val input: InputStream) {
         }
         sb.append("\n)\n\n")
 
-        sb.append("private val regexDefs = hashMapOf(")
+        sb.append("private val regexDefs = hashMapOf<Int,Regex>(")
         var isFirst = true
         for (i in 0 until tokenValue.size) {
             if (tokenValue[i]!![0] == '`') {
                 if (isFirst) {
-                    sb.append("Pair($i, \"${tokenValue[i]!!.substring(1, tokenValue[i]!!.length - 1)}\")")
+                    sb.append("Pair($i, \"${tokenValue[i]!!.substring(1, tokenValue[i]!!.length - 1)}\".toRegex())")
                     isFirst = false
                 } else {
-                    sb.append(",\nPair($i, \"${tokenValue[i]!!.substring(1, tokenValue[i]!!.length - 1)}\")")
+                    sb.append(",\nPair($i, \"${tokenValue[i]!!.substring(1, tokenValue[i]!!.length - 1)}\".toRegex())")
                 }
             }
         }
@@ -150,7 +176,7 @@ class ${grammarName}Lexer(private val input: InputStream) {
         return sb.toString()
     }
 
-    private fun buildTokensInWhen(): String {
+    private fun buildTokensInWhenPart(): String {
         val sb = StringBuilder()
         for (i in 0 until tokenNames.size) {
             sb.append("$i -> Token.${tokenNames[i]}\n")

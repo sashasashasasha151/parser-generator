@@ -22,7 +22,7 @@ start                                       :   GRAMMAR words SEMICOLON rruless 
                     input_attrs             :   SQUARE_P_L attr (COMMA attr)* SQUARE_P_R
                                             ;
 
-                    return_expression       :   RETURNS SQUARE_P_L attr SQUARE_P_R
+                    return_expression       :   RETURNS input_attrs
                                             |
                                             ;
 
@@ -77,6 +77,6 @@ TYPE_OR_NAME                                :   ('a'..'z' | 'A'..'Z') ('a'..'z' 
 CODE                                        :   '{' ~('\r' | '\n')* '}';
 TOKEN_DEF                                   :   '\'' ~('\r' | '\n')* '\'';
 REGEX                                       :   '`' ~('\r' | '\n')* '`';
-EX_ATTR                                     :   '(' ~('\r' | '\n')* ')';
+EX_ATTR                                     :   '(' ~('\r' | '\n')*? ')';
 
 WS                                          :   [ \n\t\r]+ -> skip;

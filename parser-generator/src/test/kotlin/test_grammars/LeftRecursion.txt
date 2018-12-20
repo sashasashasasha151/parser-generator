@@ -1,0 +1,7 @@
+grammar LeftRecursion;
+
+start   :   next DEF;
+next    :   prev DEF;
+prev    :   start DEF;
+
+DEF     :   'def';

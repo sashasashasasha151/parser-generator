@@ -1,0 +1,37 @@
+grammar SecondHWAndAttrs;
+
+start returns [Int vall]              :   b u(b.vall!!) {@vall = @u!!.vallue}
+                                      ;
+
+u [Int vall] returns [Int vallue]     :   op b {@vallue = if(@op!!.UN != null) @vall - @b!!.vall!! else @vall + @b!!.vall!!}
+                                          u(@vallue!!) {@vallue = @u!!.vallue}
+                                      |   ~ {@vallue = @vall}
+                                      ;
+
+op                                    :   ADD
+                                      |   UN
+                                      ;
+
+
+b returns [Int vall]                  :   c v(c.vall!!) {@vall = @v!!.vallue}
+                                      ;
+
+v [Int vall] returns [Int vallue]     :   MUL c {@vallue = @vall * @c!!.vall!!}
+                                          v(@vallue!!) {@vallue = @v!!.vallue}
+                                      |   ~ {@vallue = @vall}
+                                      ;
+
+c returns [Int vall]                  : UN d {@vall = @d!!.vall!! *-1}
+                                      | d {@vall = @d!!.vall}
+                                      ;
+
+d returns [Int vall]                  : LP start RP {@vall = @start!!.vall}
+                                      | VAR         {@vall = @VAR!!.text.toInt()}
+                                      ;
+
+MUL                 : '*';
+ADD                 : '+';
+UN                  : '-';
+LP                  : '(';
+RP                  : ')';
+VAR                 : `[1-9]([0-9])*`;

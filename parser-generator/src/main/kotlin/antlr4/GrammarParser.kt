@@ -135,7 +135,7 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 
         private val serializedIntegersATN =
         	arrayOf(3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 
-        	3, 19, 135, 4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 
+        	3, 19, 132, 4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 
         	6, 9, 6, 4, 7, 9, 7, 4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 
         	9, 11, 4, 12, 9, 12, 4, 13, 9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 
         	4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9, 18, 3, 2, 3, 2, 3, 2, 3, 
@@ -143,57 +143,56 @@ class GrammarParser(input: TokenStream) : Parser(input) {
         	14, 4, 50, 11, 4, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 6, 3, 6, 3, 
         	6, 3, 7, 3, 7, 3, 7, 3, 7, 5, 7, 64, 10, 7, 3, 8, 3, 8, 3, 8, 3, 
         	8, 7, 8, 70, 10, 8, 12, 8, 14, 8, 73, 11, 8, 3, 8, 3, 8, 3, 9, 
-        	3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 83, 10, 9, 3, 10, 3, 10, 3, 
-        	10, 3, 11, 3, 11, 3, 11, 7, 11, 91, 10, 11, 12, 11, 14, 11, 94, 
-        	11, 11, 3, 12, 3, 12, 7, 12, 98, 10, 12, 12, 12, 14, 12, 101, 11, 
-        	12, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 5, 
-        	13, 111, 10, 13, 3, 14, 3, 14, 5, 14, 115, 10, 14, 3, 15, 3, 15, 
-        	5, 15, 119, 10, 15, 3, 16, 3, 16, 7, 16, 123, 10, 16, 12, 16, 14, 
-        	16, 126, 11, 16, 3, 17, 3, 17, 3, 17, 3, 17, 3, 17, 3, 18, 3, 18, 
-        	3, 18, 2, 2, 19, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 
-        	28, 30, 32, 34, 2, 4, 3, 2, 12, 14, 3, 2, 16, 17, 2, 128, 2, 36, 
-        	3, 2, 2, 2, 4, 42, 3, 2, 2, 2, 6, 44, 3, 2, 2, 2, 8, 51, 3, 2, 
-        	2, 2, 10, 56, 3, 2, 2, 2, 12, 63, 3, 2, 2, 2, 14, 65, 3, 2, 2, 
-        	2, 16, 82, 3, 2, 2, 2, 18, 84, 3, 2, 2, 2, 20, 87, 3, 2, 2, 2, 
-        	22, 95, 3, 2, 2, 2, 24, 110, 3, 2, 2, 2, 26, 114, 3, 2, 2, 2, 28, 
-        	118, 3, 2, 2, 2, 30, 120, 3, 2, 2, 2, 32, 127, 3, 2, 2, 2, 34, 
-        	132, 3, 2, 2, 2, 36, 37, 7, 11, 2, 2, 37, 38, 5, 4, 3, 2, 38, 39, 
-        	7, 4, 2, 2, 39, 40, 5, 6, 4, 2, 40, 41, 5, 30, 16, 2, 41, 3, 3, 
-        	2, 2, 2, 42, 43, 9, 2, 2, 2, 43, 5, 3, 2, 2, 2, 44, 48, 5, 8, 5, 
-        	2, 45, 47, 5, 8, 5, 2, 46, 45, 3, 2, 2, 2, 47, 50, 3, 2, 2, 2, 
-        	48, 46, 3, 2, 2, 2, 48, 49, 3, 2, 2, 2, 49, 7, 3, 2, 2, 2, 50, 
-        	48, 3, 2, 2, 2, 51, 52, 5, 10, 6, 2, 52, 53, 7, 3, 2, 2, 53, 54, 
-        	5, 20, 11, 2, 54, 55, 7, 4, 2, 2, 55, 9, 3, 2, 2, 2, 56, 57, 7, 
-        	12, 2, 2, 57, 58, 5, 12, 7, 2, 58, 11, 3, 2, 2, 2, 59, 60, 5, 14, 
-        	8, 2, 60, 61, 5, 16, 9, 2, 61, 64, 3, 2, 2, 2, 62, 64, 5, 16, 9, 
-        	2, 63, 59, 3, 2, 2, 2, 63, 62, 3, 2, 2, 2, 64, 13, 3, 2, 2, 2, 
-        	65, 66, 7, 5, 2, 2, 66, 71, 5, 18, 10, 2, 67, 68, 7, 7, 2, 2, 68, 
-        	70, 5, 18, 10, 2, 69, 67, 3, 2, 2, 2, 70, 73, 3, 2, 2, 2, 71, 69, 
-        	3, 2, 2, 2, 71, 72, 3, 2, 2, 2, 72, 74, 3, 2, 2, 2, 73, 71, 3, 
-        	2, 2, 2, 74, 75, 7, 6, 2, 2, 75, 15, 3, 2, 2, 2, 76, 77, 7, 10, 
-        	2, 2, 77, 78, 7, 5, 2, 2, 78, 79, 5, 18, 10, 2, 79, 80, 7, 6, 2, 
-        	2, 80, 83, 3, 2, 2, 2, 81, 83, 3, 2, 2, 2, 82, 76, 3, 2, 2, 2, 
-        	82, 81, 3, 2, 2, 2, 83, 17, 3, 2, 2, 2, 84, 85, 5, 4, 3, 2, 85, 
-        	86, 5, 4, 3, 2, 86, 19, 3, 2, 2, 2, 87, 92, 5, 22, 12, 2, 88, 89, 
-        	7, 8, 2, 2, 89, 91, 5, 22, 12, 2, 90, 88, 3, 2, 2, 2, 91, 94, 3, 
-        	2, 2, 2, 92, 90, 3, 2, 2, 2, 92, 93, 3, 2, 2, 2, 93, 21, 3, 2, 
-        	2, 2, 94, 92, 3, 2, 2, 2, 95, 99, 5, 24, 13, 2, 96, 98, 5, 24, 
-        	13, 2, 97, 96, 3, 2, 2, 2, 98, 101, 3, 2, 2, 2, 99, 97, 3, 2, 2, 
-        	2, 99, 100, 3, 2, 2, 2, 100, 23, 3, 2, 2, 2, 101, 99, 3, 2, 2, 
-        	2, 102, 103, 7, 12, 2, 2, 103, 104, 5, 26, 14, 2, 104, 105, 5, 
-        	28, 15, 2, 105, 111, 3, 2, 2, 2, 106, 107, 7, 13, 2, 2, 107, 111, 
-        	5, 28, 15, 2, 108, 109, 7, 9, 2, 2, 109, 111, 5, 28, 15, 2, 110, 
-        	102, 3, 2, 2, 2, 110, 106, 3, 2, 2, 2, 110, 108, 3, 2, 2, 2, 111, 
-        	25, 3, 2, 2, 2, 112, 115, 7, 18, 2, 2, 113, 115, 3, 2, 2, 2, 114, 
-        	112, 3, 2, 2, 2, 114, 113, 3, 2, 2, 2, 115, 27, 3, 2, 2, 2, 116, 
-        	119, 7, 15, 2, 2, 117, 119, 3, 2, 2, 2, 118, 116, 3, 2, 2, 2, 118, 
-        	117, 3, 2, 2, 2, 119, 29, 3, 2, 2, 2, 120, 124, 5, 32, 17, 2, 121, 
-        	123, 5, 32, 17, 2, 122, 121, 3, 2, 2, 2, 123, 126, 3, 2, 2, 2, 
-        	124, 122, 3, 2, 2, 2, 124, 125, 3, 2, 2, 2, 125, 31, 3, 2, 2, 2, 
-        	126, 124, 3, 2, 2, 2, 127, 128, 7, 13, 2, 2, 128, 129, 7, 3, 2, 
-        	2, 129, 130, 5, 34, 18, 2, 130, 131, 7, 4, 2, 2, 131, 33, 3, 2, 
-        	2, 2, 132, 133, 9, 3, 2, 2, 133, 35, 3, 2, 2, 2, 12, 48, 63, 71, 
-        	82, 92, 99, 110, 114, 118, 124)
+        	3, 9, 3, 9, 5, 9, 80, 10, 9, 3, 10, 3, 10, 3, 10, 3, 11, 3, 11, 
+        	3, 11, 7, 11, 88, 10, 11, 12, 11, 14, 11, 91, 11, 11, 3, 12, 3, 
+        	12, 7, 12, 95, 10, 12, 12, 12, 14, 12, 98, 11, 12, 3, 13, 3, 13, 
+        	3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 5, 13, 108, 10, 13, 3, 
+        	14, 3, 14, 5, 14, 112, 10, 14, 3, 15, 3, 15, 5, 15, 116, 10, 15, 
+        	3, 16, 3, 16, 7, 16, 120, 10, 16, 12, 16, 14, 16, 123, 11, 16, 
+        	3, 17, 3, 17, 3, 17, 3, 17, 3, 17, 3, 18, 3, 18, 3, 18, 2, 2, 19, 
+        	2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 
+        	2, 4, 3, 2, 12, 14, 3, 2, 16, 17, 2, 125, 2, 36, 3, 2, 2, 2, 4, 
+        	42, 3, 2, 2, 2, 6, 44, 3, 2, 2, 2, 8, 51, 3, 2, 2, 2, 10, 56, 3, 
+        	2, 2, 2, 12, 63, 3, 2, 2, 2, 14, 65, 3, 2, 2, 2, 16, 79, 3, 2, 
+        	2, 2, 18, 81, 3, 2, 2, 2, 20, 84, 3, 2, 2, 2, 22, 92, 3, 2, 2, 
+        	2, 24, 107, 3, 2, 2, 2, 26, 111, 3, 2, 2, 2, 28, 115, 3, 2, 2, 
+        	2, 30, 117, 3, 2, 2, 2, 32, 124, 3, 2, 2, 2, 34, 129, 3, 2, 2, 
+        	2, 36, 37, 7, 11, 2, 2, 37, 38, 5, 4, 3, 2, 38, 39, 7, 4, 2, 2, 
+        	39, 40, 5, 6, 4, 2, 40, 41, 5, 30, 16, 2, 41, 3, 3, 2, 2, 2, 42, 
+        	43, 9, 2, 2, 2, 43, 5, 3, 2, 2, 2, 44, 48, 5, 8, 5, 2, 45, 47, 
+        	5, 8, 5, 2, 46, 45, 3, 2, 2, 2, 47, 50, 3, 2, 2, 2, 48, 46, 3, 
+        	2, 2, 2, 48, 49, 3, 2, 2, 2, 49, 7, 3, 2, 2, 2, 50, 48, 3, 2, 2, 
+        	2, 51, 52, 5, 10, 6, 2, 52, 53, 7, 3, 2, 2, 53, 54, 5, 20, 11, 
+        	2, 54, 55, 7, 4, 2, 2, 55, 9, 3, 2, 2, 2, 56, 57, 7, 12, 2, 2, 
+        	57, 58, 5, 12, 7, 2, 58, 11, 3, 2, 2, 2, 59, 60, 5, 14, 8, 2, 60, 
+        	61, 5, 16, 9, 2, 61, 64, 3, 2, 2, 2, 62, 64, 5, 16, 9, 2, 63, 59, 
+        	3, 2, 2, 2, 63, 62, 3, 2, 2, 2, 64, 13, 3, 2, 2, 2, 65, 66, 7, 
+        	5, 2, 2, 66, 71, 5, 18, 10, 2, 67, 68, 7, 7, 2, 2, 68, 70, 5, 18, 
+        	10, 2, 69, 67, 3, 2, 2, 2, 70, 73, 3, 2, 2, 2, 71, 69, 3, 2, 2, 
+        	2, 71, 72, 3, 2, 2, 2, 72, 74, 3, 2, 2, 2, 73, 71, 3, 2, 2, 2, 
+        	74, 75, 7, 6, 2, 2, 75, 15, 3, 2, 2, 2, 76, 77, 7, 10, 2, 2, 77, 
+        	80, 5, 14, 8, 2, 78, 80, 3, 2, 2, 2, 79, 76, 3, 2, 2, 2, 79, 78, 
+        	3, 2, 2, 2, 80, 17, 3, 2, 2, 2, 81, 82, 5, 4, 3, 2, 82, 83, 5, 
+        	4, 3, 2, 83, 19, 3, 2, 2, 2, 84, 89, 5, 22, 12, 2, 85, 86, 7, 8, 
+        	2, 2, 86, 88, 5, 22, 12, 2, 87, 85, 3, 2, 2, 2, 88, 91, 3, 2, 2, 
+        	2, 89, 87, 3, 2, 2, 2, 89, 90, 3, 2, 2, 2, 90, 21, 3, 2, 2, 2, 
+        	91, 89, 3, 2, 2, 2, 92, 96, 5, 24, 13, 2, 93, 95, 5, 24, 13, 2, 
+        	94, 93, 3, 2, 2, 2, 95, 98, 3, 2, 2, 2, 96, 94, 3, 2, 2, 2, 96, 
+        	97, 3, 2, 2, 2, 97, 23, 3, 2, 2, 2, 98, 96, 3, 2, 2, 2, 99, 100, 
+        	7, 12, 2, 2, 100, 101, 5, 26, 14, 2, 101, 102, 5, 28, 15, 2, 102, 
+        	108, 3, 2, 2, 2, 103, 104, 7, 13, 2, 2, 104, 108, 5, 28, 15, 2, 
+        	105, 106, 7, 9, 2, 2, 106, 108, 5, 28, 15, 2, 107, 99, 3, 2, 2, 
+        	2, 107, 103, 3, 2, 2, 2, 107, 105, 3, 2, 2, 2, 108, 25, 3, 2, 2, 
+        	2, 109, 112, 7, 18, 2, 2, 110, 112, 3, 2, 2, 2, 111, 109, 3, 2, 
+        	2, 2, 111, 110, 3, 2, 2, 2, 112, 27, 3, 2, 2, 2, 113, 116, 7, 15, 
+        	2, 2, 114, 116, 3, 2, 2, 2, 115, 113, 3, 2, 2, 2, 115, 114, 3, 
+        	2, 2, 2, 116, 29, 3, 2, 2, 2, 117, 121, 5, 32, 17, 2, 118, 120, 
+        	5, 32, 17, 2, 119, 118, 3, 2, 2, 2, 120, 123, 3, 2, 2, 2, 121, 
+        	119, 3, 2, 2, 2, 121, 122, 3, 2, 2, 2, 122, 31, 3, 2, 2, 2, 123, 
+        	121, 3, 2, 2, 2, 124, 125, 7, 13, 2, 2, 125, 126, 7, 3, 2, 2, 126, 
+        	127, 5, 34, 18, 2, 127, 128, 7, 4, 2, 2, 128, 33, 3, 2, 2, 2, 129, 
+        	130, 9, 3, 2, 2, 130, 35, 3, 2, 2, 2, 12, 48, 63, 71, 79, 89, 96, 
+        	107, 111, 115, 121)
         val ATN = ATNDeserializer().deserializeIntegers(serializedIntegersATN)
         init {
         	decisionToDFA = Array<DFA>(ATN.numberOfDecisions, {
@@ -534,9 +533,7 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 	        get() = Rules.RULE_return_expression.id
 	        set(value) { throw RuntimeException() }
 		fun RETURNS() : TerminalNode? = getToken(GrammarParser.Tokens.RETURNS.id, 0)
-		fun SQUARE_P_L() : TerminalNode? = getToken(GrammarParser.Tokens.SQUARE_P_L.id, 0)
-		fun findAttr() : AttrContext? = getRuleContext(solver.getType("AttrContext"),0)
-		fun SQUARE_P_R() : TerminalNode? = getToken(GrammarParser.Tokens.SQUARE_P_R.id, 0)
+		fun findInput_attrs() : Input_attrsContext? = getRuleContext(solver.getType("Input_attrsContext"),0)
 		constructor(parent: ParserRuleContext?, invokingState: Int) : super(parent, invokingState){
 		}
 	}
@@ -545,7 +542,7 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		var _localctx : Return_expressionContext = Return_expressionContext(context, state)
 		enterRule(_localctx, 14, Rules.RULE_return_expression.id)
 		try {
-			this.state = 80
+			this.state = 77
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			RETURNS  ->  /*LL1AltBlock*/{
@@ -554,11 +551,7 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 			this.state = 74
 			match(RETURNS) as Token
 			this.state = 75
-			match(SQUARE_P_L) as Token
-			this.state = 76
-			attr()
-			this.state = 77
-			match(SQUARE_P_R) as Token
+			input_attrs()
 			}}
 			COLON  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
@@ -594,9 +587,9 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 82
+			this.state = 79
 			words()
-			this.state = 83
+			this.state = 80
 			words()
 			}
 		}
@@ -630,21 +623,21 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 85
+			this.state = 82
 			rule_expression()
-			this.state = 90
+			this.state = 87
 			errorHandler.sync(this);
 			_la = _input!!.LA(1)
 			while (_la==DELIM) {
 				if (true){
 				if (true){
-				this.state = 86
+				this.state = 83
 				match(DELIM) as Token
-				this.state = 87
+				this.state = 84
 				rule_expression()
 				}
 				}
-				this.state = 92
+				this.state = 89
 				errorHandler.sync(this)
 				_la = _input!!.LA(1)
 			}
@@ -678,19 +671,19 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 93
+			this.state = 90
 			expression_name()
-			this.state = 97
+			this.state = 94
 			errorHandler.sync(this);
 			_la = _input!!.LA(1)
 			while ((((_la) and 0x3f.inv()) == 0 && ((1L shl _la) and ((1L shl NO_RULE) or (1L shl RULE_NAME) or (1L shl TOKEN_NAME))) != 0L)) {
 				if (true){
 				if (true){
-				this.state = 94
+				this.state = 91
 				expression_name()
 				}
 				}
-				this.state = 99
+				this.state = 96
 				errorHandler.sync(this)
 				_la = _input!!.LA(1)
 			}
@@ -724,33 +717,33 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		var _localctx : Expression_nameContext = Expression_nameContext(context, state)
 		enterRule(_localctx, 22, Rules.RULE_expression_name.id)
 		try {
-			this.state = 108
+			this.state = 105
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			RULE_NAME  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 100
+			this.state = 97
 			match(RULE_NAME) as Token
-			this.state = 101
+			this.state = 98
 			expression_attrs()
-			this.state = 102
+			this.state = 99
 			expression_code()
 			}}
 			TOKEN_NAME  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 2)
 			if (true){
-			this.state = 104
+			this.state = 101
 			match(TOKEN_NAME) as Token
-			this.state = 105
+			this.state = 102
 			expression_code()
 			}}
 			NO_RULE  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 3)
 			if (true){
-			this.state = 106
+			this.state = 103
 			match(NO_RULE) as Token
-			this.state = 107
+			this.state = 104
 			expression_code()
 			}}
 			else -> throw NoViableAltException(this)
@@ -780,13 +773,13 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		var _localctx : Expression_attrsContext = Expression_attrsContext(context, state)
 		enterRule(_localctx, 24, Rules.RULE_expression_attrs.id)
 		try {
-			this.state = 112
+			this.state = 109
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			EX_ATTR  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 110
+			this.state = 107
 			match(EX_ATTR) as Token
 			}}
 			SEMICOLON , DELIM , NO_RULE , RULE_NAME , TOKEN_NAME , CODE  ->  /*LL1AltBlock*/{
@@ -820,13 +813,13 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		var _localctx : Expression_codeContext = Expression_codeContext(context, state)
 		enterRule(_localctx, 26, Rules.RULE_expression_code.id)
 		try {
-			this.state = 116
+			this.state = 113
 			errorHandler.sync(this)
 			when (_input!!.LA(1)) {
 			CODE  ->  /*LL1AltBlock*/{
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 114
+			this.state = 111
 			match(CODE) as Token
 			}}
 			SEMICOLON , DELIM , NO_RULE , RULE_NAME , TOKEN_NAME  ->  /*LL1AltBlock*/{
@@ -864,19 +857,19 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 118
+			this.state = 115
 			token()
-			this.state = 122
+			this.state = 119
 			errorHandler.sync(this);
 			_la = _input!!.LA(1)
 			while (_la==TOKEN_NAME) {
 				if (true){
 				if (true){
-				this.state = 119
+				this.state = 116
 				token()
 				}
 				}
-				this.state = 124
+				this.state = 121
 				errorHandler.sync(this)
 				_la = _input!!.LA(1)
 			}
@@ -911,13 +904,13 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 125
+			this.state = 122
 			match(TOKEN_NAME) as Token
-			this.state = 126
+			this.state = 123
 			match(COLON) as Token
-			this.state = 127
+			this.state = 124
 			token_expression()
-			this.state = 128
+			this.state = 125
 			match(SEMICOLON) as Token
 			}
 		}
@@ -949,7 +942,7 @@ class GrammarParser(input: TokenStream) : Parser(input) {
 		try {
 			enterOuterAlt(_localctx, 1)
 			if (true){
-			this.state = 130
+			this.state = 127
 			_la = _input!!.LA(1)
 			if ( !(_la==TOKEN_DEF || _la==REGEX) ) {
 				errorHandler.recoverInline(this)

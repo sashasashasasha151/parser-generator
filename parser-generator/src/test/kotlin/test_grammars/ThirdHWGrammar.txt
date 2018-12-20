@@ -1,0 +1,150 @@
+grammar ThirdHWGrammar;
+
+start returns [String value]
+    :   expression (1)                                          {@value = "fun main(args: Array<String>){\n${@expression!!.value}}"}
+    |   ~                                                       {@value = "fun main(args: Array<String>){\n}"}
+    ;
+
+
+expression[Int indent] returns [String value]
+    :   simple_expression (indent)                               {@value = @simple_expression!!.value + "\n"}
+        expression (indent)                                      {@value += @expression!!.value + "\n"}
+    |   ~
+    ;
+
+
+simple_expression[Int indent] returns [String value]
+    :   if_expression (indent)                                  {@value = @if_expression!!.value}
+    |   print_it (indent)                                       {@value = @print_it!!.value}
+    |   define (indent)                                         {@value = @define!!.value}
+    |   while_expression (indent)                               {@value = @while_expression!!.value}
+    ;
+
+while_expression[Int indent] returns [String value]
+    :   WHILE logic_value LPAREN expression (indent+1) RPAREN   {@value = "${"\t".repeat(@indent!!)}while (${@logic_value!!.value}) {\n${@expression!!.value}${"\t".repeat(@indent!!)}}"}
+    ;
+
+
+if_expression[Int indent] returns [String value]
+    :   IF logic_value
+        LPAREN expression (indent+1) RPAREN
+        else_expression (indent)                                {@value = "${"\t".repeat(@indent!!)}if (${@logic_value!!.value}) {\n${@expression!!.value}${"\t".repeat(@indent!!)}} ${@else_expression!!.value}"}
+    ;
+
+
+else_expression[Int indent] returns [String value]
+    :   LPAREN expression (indent+1) RPAREN                     {@value = "else {\n${@expression!!.value}${"\t".repeat(@indent!!)}}"}
+    |   ~                                                       {@value = ""}
+    ;
+
+
+print_it[Int indent] returns [String value]
+    :   PRINT variable                                          {@value = "${"\t".repeat(@indent!!)}println(${@variable!!.value})"}
+    ;
+
+
+define[Int indent] returns [String value]
+    :   vars_var VARS variable                                  {@value = "${"\t".repeat(@indent!!)}${@vars_var!!.value}${@VARS!!.text} = ${@variable!!.value}"}
+    ;
+
+vars_var returns [String value]
+    :   DEFINE                                                  {@value = "var "}
+    |   REDEF                                                   {@value = ""}
+    ;
+
+
+variable returns [String value]
+    :   logic_value                                             {@value = @logic_value!!.value}
+    |   int_value                                               {@value = @int_value!!.value}
+    ;
+
+
+logic_value returns [String value]
+    :   logic_logic logic_value                                 {@value = logic_logic.value + "${@logic_value!!.value})"}
+    |   VARS                                                    {@value = @VARS!!.text}
+    |   TRUE                                                    {@value = "true"}
+    |   FALSE                                                   {@value = "false"}
+    |   op_int int_value                                        {@value = "${@op_int!!.value} ${@int_value!!.value})"}
+    ;
+
+op_int returns [String value]
+    :   compare_op int_value                                    {@value = "(${@int_value!!.value} ${@compare_op!!.op}"}
+    ;
+
+logic_logic returns [String value]
+    :   logic_operation logic_value                             {@value = "(${@logic_value!!.value} ${@logic_operation!!.op}"}
+    |   NOT                                                     {@value = "!("}
+    ;
+
+
+int_value returns [String value]
+    :   int_int int_value                                       {@value = "${@int_int!!.value} ${@int_value!!.value})"}
+    |   VARS                                                    {@value = @VARS!!.text}
+    |   NUMBER                                                  {@value = @NUMBER!!.text}
+    ;
+
+int_int returns [String value]
+    :   int_operations int_value                                {@value = "(${@int_value!!.value} ${@int_operations!!.op}"}
+    ;
+
+
+logic_operation returns [String op]
+    :   OR                                                      {@op = " || "}
+    |   AND                                                     {@op = " && "}
+    |   L_EQUAL                                                 {@op = " == "}
+    |   L_NOT_EQUAL                                             {@op = " != "}
+    ;
+
+
+int_operations returns [String op]
+    :   PLUS                                                    {@op = " + "}
+    |   MINUS                                                   {@op = " - "}
+    |   MULL                                                    {@op = " * "}
+    |   DIV                                                     {@op = " / "}
+    ;
+
+
+compare_op returns [String op]
+    :   I_EQUAL                                                 {@op = " == "}
+    |   I_NOT_EQUAL                                             {@op = " != "}
+    |   LOWER                                                   {@op = " < "}
+    |   LOWER_EQUAL                                             {@op = " <= "}
+    |   HIGHER                                                  {@op = " > "}
+    |   HIGHER_EQUAL                                            {@op = " >= "}
+    ;
+
+
+IF                              :   'if';
+WHILE                           :   'while';
+
+LPAREN                          :   '(';
+RPAREN                          :   ')';
+
+PRINT                           :   'print';
+
+DEFINE                          :   'def';
+REDEF                           :   '=';
+TRUE                            :   'true';
+FALSE                           :   'false';
+
+
+NOT                             :   '!';
+OR                              :   '|';
+AND                             :   '&';
+
+
+PLUS                            :   '+';
+MINUS                           :   '-';
+MULL                            :   '*';
+DIV                             :   '/';
+
+L_EQUAL                         :   '==';
+I_EQUAL                         :   '===';
+L_NOT_EQUAL                     :   '!=';
+I_NOT_EQUAL                     :   '!==';
+LOWER                           :   '<';
+LOWER_EQUAL                     :   '<=';
+HIGHER                          :   '>';
+HIGHER_EQUAL                    :   '>=';
+VARS                            :   `([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]|_)*`;
+NUMBER                          :   `((-)?[1-9][0-9]*)|0`;
