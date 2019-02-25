@@ -1,0 +1,6 @@
+*.zip
+.idea/
+out/
+*.iml
+CMakeLists.txt
+*.jar
